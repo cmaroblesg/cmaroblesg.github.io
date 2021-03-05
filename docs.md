@@ -4,5 +4,4 @@ title: Docs
 permalink: /docs/
 ---
 
-#### Curriculum Vitae
-[CV-CesarRobles](/documents/CV/CV_CesarRobles.pdf){:target="_blank"}
+**Curriculum Vitae:** [CV-CesarRobles](/documents/CV/CV_CesarRobles.pdf){:target="_blank"}
