@@ -5,4 +5,4 @@ permalink: /docs/
 ---
 
 #### Curriculum Vitae
-/documents/CV/CV_CesarRobles.pdf
+[CV-CesarRobles](/documents/CV/CV_CesarRobles.pdf)
