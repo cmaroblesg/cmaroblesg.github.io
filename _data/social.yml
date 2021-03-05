@@ -1,9 +1,9 @@
 - title: Twitter
   url: https://twitter.com/cmaroblesg
   icon: fab fa-twitter
-- title: GitHub
-  url: https://github.com/cmaroblesg
-  icon: fab fa-github
 - title: LinkedIn
   url: https://www.linkedin.com/in/cmaroblesg/
   icon: fab fa-linkedin-in
+- title: GitHub
+  url: https://github.com/cmaroblesg
+  icon: fab fa-github
