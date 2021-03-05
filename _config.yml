@@ -3,6 +3,7 @@ description: A personal Blog and Portfolio.
 author: César Robles
 avatar: /imag/cmaroblesg.jpg
 email: cerobles@gmail.com
+location: Mexico
 
 plugins:
   - jekyll-seo-tag
