@@ -4,4 +4,5 @@ title: Docs
 permalink: /docs/
 ---
 
-A documentation page.
+#### Curriculum Vitae
+[CV-Cesar_Robles]: /docs/CV/CV_CesarRobles.pdf
