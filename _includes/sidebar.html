@@ -14,7 +14,7 @@
     {% if site.author -%}
       <li>
         <i class="sidebar-icon fas fa-at"></i>
-        <span class="contact-info p-name" href="https://www.linkedin.com/in/cmaroblesg/" target='_blank'>{{ site.author}}</span>
+        <a class="contact-info p-name" href="https://www.linkedin.com/in/cmaroblesg/" target='_blank'>{{ site.author}}</a>
       </li>
     {%- endif %}
     {% if site.email -%}
@@ -26,7 +26,7 @@
     {% if site.phone -%}
       <li>
         <i class="sidebar-icon fas fa-phone"></i>
-        <a class="contact-info u-phone">{{ site.phone | escape}}</a>
+        <span class="contact-info u-phone">{{ site.phone | escape}}</span>
       </li>
     {%- endif %}
     {% if site.location -%}
