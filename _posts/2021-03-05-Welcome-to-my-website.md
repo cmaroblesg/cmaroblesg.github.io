@@ -1,8 +1,6 @@
 ---
 layout: post
 ---
-# Welcome to my first post
-
 This is my first try using the Github platform with Markdowns files. Moreover, in this website, I will try to share interesting stuff as well as some code in python.\
 
 During the COVID-19 outbreak, I have been learning about many things such as Data Science, Data Analytics, Cloud Platforms such as Google, AWS and IBM and many new things.\
