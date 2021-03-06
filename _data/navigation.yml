@@ -2,5 +2,9 @@
   url: /about/
 - title: Docs
   url: /docs/
-- title: Career
-  url: /career/
+- title: Training
+  sublinks:
+    - title: Career
+      url: /career/
+    - title: Degrees
+      url: /degrees/
