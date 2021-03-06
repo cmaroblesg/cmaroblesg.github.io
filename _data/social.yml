@@ -7,10 +7,15 @@
 - title: LinkedIn
   url: https://www.linkedin.com/in/cmaroblesg/
   icon: fab fa-linkedin-in
-    
 - title: Instagram
   url: https://www.instagram.com/cmaroblesg/
   icon: fab fa-instagram
 - title: Facebook
   url: https://www.facebook.com/cesarmarcoantonio.roblesgonzalez.3
   icon: fab fa-facebook
+- title: Acclaim
+  url: https://www.youracclaim.com/users/cesar-marco-antonio-robles-gonzalez/badges
+  icon: fas fa-certificate
+- title: Coursera
+  url: https://www.coursera.org/user/6e4b7bcdd6f5efdb1e93a27d3e516e92
+  icon: fab fa-leanpub
