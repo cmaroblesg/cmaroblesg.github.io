@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Degrees
-permalink: /degree/
+permalink: /degrees/
 ---
 
 <table>
