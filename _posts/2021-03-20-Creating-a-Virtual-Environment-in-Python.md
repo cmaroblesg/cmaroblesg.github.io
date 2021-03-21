@@ -1,9 +1,9 @@
 ---
 layout: post
-toc: true
-title: "This post demonstrates post content styles"
-categories: junk
-tags: [markdown, css, html]
+toc: false
+title: "Creating a Python Virtual Environment"
+categories: [Coding]
+tags: [Python]
 author: César Robles
 ---
 Python applications needs lot of package and libraries that most of the time are not included when installed from scratch. Sometimes, it is needed to include specific version library to work with, and most of the time the newest libraries come with bugs or doesn't have full integration with the new environment.
