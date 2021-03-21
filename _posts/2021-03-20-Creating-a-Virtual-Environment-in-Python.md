@@ -14,5 +14,5 @@ So, the most common solution is to create a virtual environment, that contains t
 This isn't a difficult task and you need only to select a folder or directory that will contains the virtual environment.
 
 ```
-python -m venv <folder_path>/.
+python3 -m venv <folder_path>/.
 ```
