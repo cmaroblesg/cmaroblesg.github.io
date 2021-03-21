@@ -1,5 +1,10 @@
 ---
 layout: post
+toc: true
+title: "Visualization Tools"
+categories: [Visualization]
+tags: [Tableau, Qlik Sense]
+author: César Robles
 ---
 Nowadays, it is very important to know how to model data and create visualizations. For that reason, I recommend Qlik Sense and Tableau. There are other important tools that could help you in the data visualization modeling such as Power Bi. Moreover, this is the new abiiliity that you must learn.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-toc: false
+toc: true
 title: "Creating a Python Virtual Environment"
 categories: [Coding]
 tags: [Python]

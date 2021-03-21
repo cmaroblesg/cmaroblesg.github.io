@@ -1,5 +1,10 @@
 ---
 layout: post
+toc: true
+title: "Welcome to my Website/Blog"
+categories: [Notes]
+tags: [Notes]
+author: César Robles
 ---
 This is my first try using the Github platform with Markdowns files. Moreover, in this website, I will try to share interesting stuff as well as some code in python.\
 
