@@ -16,3 +16,4 @@ This isn't a difficult task and you need only to select a folder or directory th
 ```
 python3 -m venv <folder_path>/.
 ```
+![Folder path](./files/folder_path.png)
