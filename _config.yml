@@ -3,8 +3,8 @@ description: A personal Blog and Portfolio.
 author: César Robles
 avatar: /imag/cmaroblesg.jpg
 email: cerobles@gmail.com
-phone: +52 55 4145 7976
-location: Coyoacán, Mexico-City
+#phone: +52 55 4145 7976
+location: Mexico
 
 plugins:
   - jekyll-seo-tag
