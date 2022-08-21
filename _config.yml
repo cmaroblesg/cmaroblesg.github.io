@@ -1,1 +1,49 @@
-theme: jekyll-theme-minimal
+title: César Robles
+description: A personal Blog and Portfolio.
+author: César Robles
+avatar: /imag/cmaroblesg.jpg
+email: cerobles@gmail.com
+#phone: +52 55 4145 7976
+location: Mexico
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+
+# Uncomment the below line and set the tracking ID for enabling Google Analytics
+#
+google_analytics: G-Y2ZXK6FDLB
+
+# Uncomment the below lines and set the Disqus shortname for enabling Disqus
+#
+# disqus:
+
+# Jekyll
+# ======
+exclude:
+  - scripts/
+  - README.md
+  - jekyll-theme-hamilton.gemspec
+
+# Jekyll SEO Tag (Optional)
+# =========================
+twitter:
+  username: cmaroblesg
+  card: summary
+logo: logo.png
+social:
+  name: César Robles
+  links:
+    - https://twitter.com/cmaroblesg
+    - https://www.linkedin.com/in/cmaroblesg/
+    - https://github.com/cmaroblesg
+    - https://www.instagram.com/cmaroblesg/
+    - https://www.facebook.com/cesarmarcoantonio.roblesgonzalez.3
+    - https://www.youracclaim.com/users/cesar-marco-antonio-robles-gonzalez/badges
+    - https://www.coursera.org/user/6e4b7bcdd6f5efdb1e93a27d3e516e92
+    - https://buymeacoffee.com/AJP601gNK
+lang: en
