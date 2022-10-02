@@ -6,16 +6,18 @@ permalink: /about/
 
 # About
 
-Being a Financial Manager is exactly what you would think it is like. I used to check financial numbers to find errors, tendencies, patterns and even more. As a part of my current functions, I create dashboards to help the stakeholders to make decisions. The financial industry, nowadays, is under many changes due to the COVID-19 outbreak, and this will impact in the near future.
+Being a Data Custodian and now a Data Platforms Tech Owner is remarkably interesting but complicated since those roles are closely related to Data Management and Governance. Most of the time, I am thinking of new ways to innovate and improve communication between the data foundations teams and data platforms and to understand the business procedures and needs.
 
-The biggest problem at this moment is to integrate the new normal with the technology. In other words, how to go to the digital transformation and not suffering in the way. Developing chat bots and doing automations using Python and R programming language could be the beginning, but also taking into considerations the artificial intelligence.
+Part of my activities are to coordinate, lead and innovate into Data Foundations Platforms' roadmap and to improve them to a self-service solution adopting DevOps practices and evolution to integrate Kubernetes and OpenShift.
 
-Learning is my passion and for that reason I am constantly improving and reinventing myself. Also, I love to play chess because it maintains my mind alert and thinking in the next move and respecting my adversary. But, not everything is about war and destruction, I like to play collaborative online multiplayer video games with people a long the world.
+The financial industry, nowadays, is under many changes due to the COVID-19 outbreak, and this will impact soon. Being the biggest problem at this moment, the integration of the new normal with technology and the home-office. In other words, how to go to digital transformation, agile frameworks and not suffering in the way. We are now in a big challenging and changing world and it is our must to adapt ourselves.
 
-I am very organize because it makes the life easier. So, I integrate this part of my life to projects by integrating Agile Frameworks such as SCRUM. When I am not at work, I am reading and analyzing sport data, because it is easy to implement data science analysis and get some fun predicting the scores based on the last games.
+Learning is my passion and for that reason I am constantly improving and reinventing myself. Also, I love to play chess because it keeps my mind alert and thinking in the next move and respecting my adversary. But not everything is about war and destruction, I like to play collaborative online multiplayer video games with people from all over the world.
 
-At the core I am a researcher and a family man who love to have great moments with my family and my pets. Walking the dog and see how it interacts with other people and animals make me have fun most of the time. Having some time looking my cats play around the house and watching funny cat’s video to try to imitate those. My wife is my rock and she helps me to find my way and she makes me do my best all the time.
+I am very organizing because it makes life easier. So, I integrate this part of my life to projects by integrating Agile Frameworks such as Scrum and Kanban. When I am not at work, I read and analyze sport data, because it is easy to implement data science analysis and have some fun predicting the scores based on the last games.
 
-**Specialties:** *Python, Data Science, Deep Learning, Machine Learning, Cloud Computing and Automation.*
+At the core I am a researcher and a family head who loves to have great moments with my family and my pets. Walking the dog and seeing how it interacts with other people and animals makes me have fun most of the time. Having some time looking at my cats playing around the house and watching funny cat’s videos to try to imitate those. My wife is my rock and she helps me to find my way and she makes me do my best all the time.
 
-Feel free to reach out to have a funny talk about the new normal, chatbots, machine learning, cloud computing or anything else; don’t forget that we can get it together and thrive.
+Feel free to reach out to have a funny talk about the new normal, chatbots, machine learning, cloud computing or anything else; do not forget that we can get it together and thrive.
+
+**Specialties:** Python, Data Science, Data Management Data Governance, Tableau, Qlik Sense, Alteryx, DevOps, Deep Learning, Machine Learning, Cloud Computing and Automation.
