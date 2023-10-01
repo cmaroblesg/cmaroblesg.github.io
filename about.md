@@ -16,7 +16,7 @@ I have an insatiable passion for learning, which propels me to continuously evol
 
 Organization is intrinsic to me; it's a tool that simplifies life. I seamlessly blend this trait into my professional projects by integrating Agile Frameworks like Scrum and Kanban. In my leisure time, I delve into sports data analysis – it's fascinating to apply data science techniques and predict game outcomes based on historical performances.
 
-At my core, I'm a curious researcher and a devoted family man. I cherish moments with my loved ones, whether it's observing my dog interact with the world or mimicking playful antics from amusing cat videos with my feline friends. My wife is my steadfast pillar, continually inspiring me to excel.
+At my core, I'm a curious researcher and a dedicated family man. I treasure moments with my loved ones, whether it's watching my dog interact with the world or mimicking playful antics inspired by amusing cat videos with my feline companions. My wife stands as my unwavering pillar, constantly motivating me to reach greater heights. Moreover, I am the proud father of a beautiful and incredibly intelligent daughter who reminds me daily of the reasons I strive to improve every day.
 
 Feel free to connect! Whether you want a light-hearted discussion on the new normal, chatbots, machine learning, cloud computing, or any other topic – remember, collaboration is the key to thriving.
 
