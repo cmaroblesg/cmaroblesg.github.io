@@ -6,18 +6,19 @@ permalink: /about/
 
 # About
 
-Being a Data Custodian and now a Data Platforms Tech Owner is remarkably interesting but complicated since those roles are closely related to Data Management and Governance. Most of the time, I am thinking of new ways to innovate and improve communication between the data foundations teams and data platforms and to understand the business procedures and needs.
+Juggling the roles of a Data Scientist Manager and Product Owner is a challenging endeavor. It demands a seamless blend of the data science realm with project management, often necessitating collaboration with multiple teams across different business sectors. The goal is to crystallize the ideal product definition and subsequently ensure its successful execution within the development team. Contrary to popular belief, planning and generation are intricate processes, requiring immense patience and a strong foundation in design thinking methodologies.
 
-Part of my activities are to coordinate, lead and innovate into Data Foundations Platforms' roadmap and to improve them to a self-service solution adopting DevOps practices and evolution to integrate Kubernetes and OpenShift.
+A significant portion of my responsibilities centers around coordinating, leading, and charting the course for a multi-disciplinary, high-performance team of Data Scientists. My primary goal is to challenge and transform the bank's misconceptions about generative artificial intelligence technologies. By adopting and implementing various LLM models, I aim to usher the banking industry into a new era—one where this groundbreaking technology is harnessed for the betterment of both customers and employees.
 
-The financial industry, nowadays, is under many changes due to the COVID-19 outbreak, and this will impact soon. Being the biggest problem at this moment, the integration of the new normal with technology and the home-office. In other words, how to go to digital transformation, agile frameworks and not suffering in the way. We are now in a big challenging and changing world and it is our must to adapt ourselves.
+The financial industry is currently undergoing significant shifts, particularly due to the ramifications of the COVID-19 pandemic. The most pressing challenge is navigating the "new normal" – integrating remote work with technology. In essence, the question is: how can we achieve digital transformation and implement agile frameworks without stumbling along the way? We are undoubtedly in a dynamic world, and adaptation is imperative.
 
-Learning is my passion and for that reason I am constantly improving and reinventing myself. Also, I love to play chess because it keeps my mind alert and thinking in the next move and respecting my adversary. But not everything is about war and destruction, I like to play collaborative online multiplayer video games with people from all over the world.
+I have an insatiable passion for learning, which propels me to continuously evolve and reinvent myself. Outside the professional realm, chess captivates me – it sharpens my strategic thinking and cultivates respect for opponents. Yet, not all games are about conflict; I relish collaborative online multiplayer games, connecting with individuals globally.
 
-I am very organizing because it makes life easier. So, I integrate this part of my life to projects by integrating Agile Frameworks such as Scrum and Kanban. When I am not at work, I read and analyze sport data, because it is easy to implement data science analysis and have some fun predicting the scores based on the last games.
+Organization is intrinsic to me; it's a tool that simplifies life. I seamlessly blend this trait into my professional projects by integrating Agile Frameworks like Scrum and Kanban. In my leisure time, I delve into sports data analysis – it's fascinating to apply data science techniques and predict game outcomes based on historical performances.
 
-At the core I am a researcher and a family head who loves to have great moments with my family and my pets. Walking the dog and seeing how it interacts with other people and animals makes me have fun most of the time. Having some time looking at my cats playing around the house and watching funny cat’s videos to try to imitate those. My wife is my rock and she helps me to find my way and she makes me do my best all the time.
+At my core, I'm a curious researcher and a devoted family man. I cherish moments with my loved ones, whether it's observing my dog interact with the world or mimicking playful antics from amusing cat videos with my feline friends. My wife is my steadfast pillar, continually inspiring me to excel.
 
-Feel free to reach out to have a funny talk about the new normal, chatbots, machine learning, cloud computing or anything else; do not forget that we can get it together and thrive.
+Feel free to connect! Whether you want a light-hearted discussion on the new normal, chatbots, machine learning, cloud computing, or any other topic – remember, collaboration is the key to thriving.
 
-**Specialties:** Python, Data Science, Data Management Data Governance, Tableau, Qlik Sense, Alteryx, DevOps, Deep Learning, Machine Learning, Cloud Computing and Automation.
+**Specialties:** Python, Data Science, Data Management, Data Governance, Tableau, Qlik Sense, Alteryx, DevOps, Deep Learning, Machine Learning, Generative AI, Large Language Models (LLM), Cloud Computing, and Automation.
+
