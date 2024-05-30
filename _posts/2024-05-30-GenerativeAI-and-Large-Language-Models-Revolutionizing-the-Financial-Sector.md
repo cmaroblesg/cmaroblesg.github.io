@@ -1,12 +1,11 @@
 ---
 layout: post
 toc: true
-title: "Generative AI and Large Language Models: Revolutionizing the Financial Sector"
-categories: [Coding]
-tags: [Python]
+title: "🌟 Generative AI and Large Language Models: Revolutionizing the Financial Sector 🌟"
+categories: [Post]
+tags: [LinkedIn Post]
 author: César Robles
 ---
-# 🌟 Generative AI and Large Language Models: Revolutionizing the Financial Sector 🌟
 In recent years, Generative AI and Large Language Models (LLMs) have taken the tech world by storm, and the financial sector is no exception. These advanced technologies are transforming how financial institutions operate, offering new opportunities for efficiency, security, and customer service.
 
 ## 🔍 What is Generative AI?
