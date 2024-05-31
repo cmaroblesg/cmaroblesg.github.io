@@ -1,13 +1,14 @@
-﻿Position,Company,Location,Start Date,End Date,Responsibilities
-"Data Scientist Manager & Product Owner","BBVA","Mexico City, Mexico","05/2023","present","- Led a team to create predictive models, increasing customer retention by 20%.<br>- Developed data-driven solutions, reducing operational costs by 15%. - Managed product development lifecycle and ensured timely delivery. - Implemented agile methodologies and improved data quality."
-"Data Tech Owner | VP SR Data Governance","Citibanamex","Mexico City, Mexico","11/2022","05/2023","- Created bespoke data platforms for real-time insights. - Introduced cutting-edge data tools for efficiency. - Enhanced team responsiveness to new technologies. - Led monitoring squad for quick issue resolution."
-"Data Custodian Lead | VP SR Data Governance","Citibanamex","Mexico City, Mexico","08/2021","11/2021","- Coordinated between business and technology stakeholders. - Championed data management best practices. - Assisted Data Foundations Teams in process integration."
-"Global WPB Financial Manager","HSBC","London, United Kingdom","04/2020","08/2021","- Coordinated innovation projects in the Americas. - Developed data models and dashboards. - Led GCP Cloud adoption and automated processes. - Managed a Scrum team for project execution."
-"Global RBWM Financial Manager","HSBC","London, United Kingdom","02/2019","04/2020","- Implemented SCRUM Framework for financial projects. - Analyzed data sources and resolved issues. - Led Chatbot project for investor support. - Designed automation tools for stakeholder decision-making."
-"Specialist Consultant","HSBC","Mexico City, Mexico","02/2017","02/2019","- Directed projects in data quality and machine learning. - Innovated bank-branch operation methodologies. - Optimized product price estimations. - Developed interactive dashboards using Qlik Sense."
-"Ph.D. Researcher Assistant","Instituto Politécnico Nacional","Mexico City, Mexico","01/2016","01/2017","- Led Electrical Impedance Tomography project. - Conducted research on data science in finance. - Coordinated AI and machine learning projects. - Assisted in grant proposals and manuscript preparation."
-"PHD Researcher","Instituto Politécnico Nacional","Mexico City, Mexico","01/2012","01/2016","- Led projects in AI, machine learning, and data science. - Implemented solutions for Electrical Impedance Tomography. - Published numerous papers and participated in congresses."
-"Researcher","Instituto Politécnico Nacional","Mexico City, Mexico","01/2011","12/2012","- Led Seismic Alert System Project. - Designed forward problem calculation for EIT."
-"Researcher","Universidad La Salle, A.C.","Mexico City, Mexico","10/2009","01/2012","- Led EIT project using AI and genetic algorithms. - Conducted research in mathematical methodologies. - Pursued a Masters in Science focused on Cybernetics."
-"Junior Developer","Accival-Banamex","Mexico City, Mexico","10/2006","03/2007","- Developed user-friendly trading tools. - Implemented Java programming techniques. - Resolved technical issues and conducted code reviews."
-"Junior Developer","Laboratorio de Computo de Ingenieria de la Universidad La Salle","Mexico City, Mexico","08/2005","10/2006","- Developed software solutions using Visual Studio and Java. - Collaborated on multiple projects for La Salle University. - Applied technical expertise to complete projects successfully."
+﻿Start,End,Position,Company
+2023,Ongoing,Data Scientist Manager & PO, BBVA
+2021,2023,Vice-President Data Governance Sr Lead, Citi Banamex
+2020,2021,Global WPB Business Finance Manager,HSBC Group UK / MX
+2019,2020,Global RBWM Business Finance Manager,HSBC Group UK / MX
+2017,2019,RBWM Business Finance Manager,HSBC MX / Contractor
+2018,2018,College Teacher,Universidad Simón Bolivar
+2016,2017,SNI III Ph.D. Assistant,Instituto Politécnico Nacional
+2016,2019,College Teacher,"Universidad La Salle, CDMX"
+2012,2016,Researcher,Instituto Politécnico Nacional
+2009,2012,Researcher,"Universidad La Salle, CDMX"
+2009,2009,LCI ULSA (Servers),"Universidad La Salle, CDMX"
+2007,2009,LCI Developer/Architect,"Universidad La Salle, CDMX"
+2006,2007,Junior Developer,CITI Group Banamex / ACCIVAL
