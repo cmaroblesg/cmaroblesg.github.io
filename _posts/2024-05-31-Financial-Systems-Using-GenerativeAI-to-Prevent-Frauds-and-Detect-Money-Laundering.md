@@ -1,5 +1,11 @@
-# 🛡️ Financial Systems Using Generative AI to Prevent Frauds and Detect Money Laundering 🛡️
-
+---
+layout: post
+toc: true
+title: "🛡️ Financial Systems Using Generative AI to Prevent Frauds and Detect Money Laundering 🛡️"
+categories: [Post]
+tags: [LinkedIn Post]
+author: César Robles
+---
 In the rapidly evolving financial sector, the integration of Generative AI is proving to be a game-changer, particularly in the areas of fraud prevention and anti-money laundering (AML). These advanced technologies are enhancing the capabilities of financial institutions to safeguard their operations and protect their customers.
 
 ## 🔍 The Role of Generative AI in Fraud Prevention
