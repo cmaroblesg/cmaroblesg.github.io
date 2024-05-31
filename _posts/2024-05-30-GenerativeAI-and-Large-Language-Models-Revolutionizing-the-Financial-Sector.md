@@ -18,14 +18,14 @@ Fraud Detection: Generating synthetic data to improve fraud detection systems by
 ## 🔍 What are Large Language Models (LLMs)?
 LLMs, such as GPT-4, are a subset of Generative AI that specialize in understanding and generating human language. These models have been trained on diverse datasets, enabling them to comprehend context, answer questions, and engage in meaningful conversations. In finance, LLMs are used for:
 
-**Natural Language Processing (NLP):** Extracting valuable insights from unstructured data like emails, documents, and social media.
-**Predictive Analytics:** Analyzing historical data to forecast market trends and investment opportunities.
-**Regulatory Compliance:** Assisting in ensuring compliance with complex regulatory requirements by interpreting legal texts and generating compliance reports.
+* **Natural Language Processing (NLP):** Extracting valuable insights from unstructured data like emails, documents, and social media.
+* **Predictive Analytics:** Analyzing historical data to forecast market trends and investment opportunities.
+* **Regulatory Compliance:** Assisting in ensuring compliance with complex regulatory requirements by interpreting legal texts and generating compliance reports.
 
 ## 💡 Examples of Generative AI and LLMs in Action
-**JPMorgan Chase's COiN:** The Contract Intelligence (COiN) platform uses AI to analyze legal documents and extract important data points, reducing the time required for mundane tasks from hundreds of thousands of hours to mere seconds.
-**HSBC's AiDA:** HSBC's Artificial Intelligence Data Analysis (AiDA) platform utilizes AI to analyze financial transactions and detect anomalies, thereby identifying potential fraud and money laundering activities.
-**Goldman Sachs' Marcus:** The digital bank leverages AI-powered chatbots to offer personalized financial advice and support, enhancing the customer experience while streamlining operations.
+* **JPMorgan Chase's COiN:** The Contract Intelligence (COiN) platform uses AI to analyze legal documents and extract important data points, reducing the time required for mundane tasks from hundreds of thousands of hours to mere seconds.
+* **HSBC's AiDA:** HSBC's Artificial Intelligence Data Analysis (AiDA) platform utilizes AI to analyze financial transactions and detect anomalies, thereby identifying potential fraud and money laundering activities.
+* **Goldman Sachs' Marcus:** The digital bank leverages AI-powered chatbots to offer personalized financial advice and support, enhancing the customer experience while streamlining operations.
 
 ## 🚀 The Future of AI in Finance
 The integration of Generative AI and LLMs in finance is just beginning. As these technologies evolve, we can expect even more innovative applications that will further transform the industry. From enhanced customer interactions to sophisticated risk management, the potential is limitless.
