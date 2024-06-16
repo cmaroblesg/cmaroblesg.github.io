@@ -31,6 +31,11 @@ Generating images with ChatGPT-4 can be incredibly useful in various fields:
 Here’s an example of how you can request an image:
 ```markdown
 Create an image of a serene beach scene at sunrise. The beach should have golden sand, gentle waves, palm trees, and a few seashells scattered along the shore. The sky should be painted with hues of pink and orange as the sun begins to rise.
+```
+
+```ssh
+Create an image of a serene beach scene at sunrise. The beach should have golden sand, gentle waves, palm trees, and a few seashells scattered along the shore. The sky should be painted with hues of pink and orange as the sun begins to rise.
+```
 
 ![Sunrise by DALL-E](/imag/post_images/sunrise_01.jpg)
 
