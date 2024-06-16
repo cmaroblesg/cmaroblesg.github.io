@@ -33,7 +33,7 @@ Here’s an example of how you can request an image:
 Create an image of a serene beach scene at sunrise. The beach should have golden sand, gentle waves, palm trees, and a few seashells scattered along the shore. The sky should be painted with hues of pink and orange as the sun begins to rise.
 ```
 
-```ssh
+```sh
 Create an image of a serene beach scene at sunrise. The beach should have golden sand, gentle waves, palm trees, and a few seashells scattered along the shore. The sky should be painted with hues of pink and orange as the sun begins to rise.
 ```
 
