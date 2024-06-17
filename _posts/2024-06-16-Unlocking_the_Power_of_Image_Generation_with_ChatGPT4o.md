@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Unlocking the Power of Image Generation with ChatGPT-4 🚀"
 categories: [Post]
-tags: [Free Post]
+tags: [LinkedIn Post]
 author: César Robles
 ---
 Have you ever wondered how to generate stunning images directly within a conversation with ChatGPT-4? It's not only possible but incredibly easy! Here's how you can harness the power of AI to create visually engaging content.
