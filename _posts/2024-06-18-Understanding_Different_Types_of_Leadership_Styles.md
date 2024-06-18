@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Understanding Different Types of Leadership Styles"
 categories: [Post]
-tags: [Free Post]
+tags: [LinkedIn Post]
 author: César Robles
 ---
 Leadership is a vital component in any organisation's success, guiding teams towards achieving common goals. Various leadership styles can significantly impact an organisation's culture and effectiveness. 

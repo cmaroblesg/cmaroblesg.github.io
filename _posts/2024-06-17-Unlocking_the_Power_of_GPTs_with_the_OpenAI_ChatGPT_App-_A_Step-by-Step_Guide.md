@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Unlocking the Power of GPTs with the OpenAI ChatGPT App: A Step-by-Step Guide 🚀"
 categories: [Post]
-tags: [Free Post]
+tags: [LinkedIn Post]
 author: César Robles
 ---
 ![Chatbots - Power by DALL-E 3.0](/imag/post_images/Chatbots.jpg)

@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Introducing Custom GPTs with OpenAI: Create Tailored Chatbots for Every Need 🚀"
 categories: [Post]
-tags: [Free Post]
+tags: [LinkedIn Post]
 author: César Robles
 ---
 Discover how you can create custom versions of ChatGPT, known as GPTs, designed for specific tasks, whether at work, at home, or for personal projects. Here’s a step-by-step guide to get you started!
