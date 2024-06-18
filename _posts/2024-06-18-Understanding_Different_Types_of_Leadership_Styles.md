@@ -87,4 +87,3 @@ Understanding different leadership styles is crucial for adapting to various tea
 4. [Verywell Mind - Transformational Leadership](https://www.verywellmind.com/what-is-transformational-leadership-2795313)
 5. [BetterUp - Transactional Leadership](https://www.betterup.com/blog/transactional-leadership)
 6. [Verywell Mind - Laissez-Faire Leadership](https://www.verywellmind.com/what-is-laissez-faire-leadership-2795316)
----
