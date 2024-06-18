@@ -6,6 +6,8 @@ categories: [Post]
 tags: [Free Post]
 author: César Robles
 ---
+![Chatbots - Power by DALL-E 3.0](/imag/post_images/Chatbots.jpg)
+
 Have you ever wondered how to create your own Generative Pre-trained Transformers (GPTs) using the OpenAI ChatGPT app? It's easier than you might think! Here's a comprehensive guide to help you harness the power of OpenAI's GPT technology, complete with examples to get you started.
 
 ## What is a GPT?
