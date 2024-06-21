@@ -8,7 +8,7 @@ author: César Robles
 ---
 As the world grapples with environmental challenges, Generative AI (Gen AI) emerges as a powerful tool to drive sustainability. By leveraging advanced algorithms to generate innovative solutions, Gen AI can significantly contribute to environmental preservation and sustainable development.
 
-![GenAI & Sustainability - Power by DALL-E 3.0](./imag/post_images/sustainability.jpg)
+![GenAI & Sustainability - Power by DALL-E 3.0](/imag/post_images/sustainability.jpg)
 
 ## How Generative AI Benefits Sustainability
 **1. Optimising Resource Use**:
