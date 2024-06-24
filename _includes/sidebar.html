@@ -35,12 +35,6 @@
         <a class="contact-info u-location" href="https://www.google.com/maps/search/{{ site.location }}">{{ site.location }}</a>
       </li>
     {%- endif %}
-    {% if site.codewars -%}
-      <li>
-        <i class="sidebar-icon fas fa-location-arrow"></i>
-        <a class="contact-info u-location" href="https://www.codewars.com/users/cmaroblesg/badges/micro?theme=light{{ site.location }}">{{ site.codewars }}</a>
-      </li>
-    {%- endif %}
   </ul>
 </div>
 
@@ -58,6 +52,11 @@
           <a class="social-icon" href="{{ social.url }}"><i class="{{ social.icon | default: 'fas fa-link' }} fa-2x" title="{{ social.title }}"></i></a>
         </li>
       {%- endfor %}
+      <li>
+        <a class="social-icon" href="https://www.codewars.com/users/cmaroblesg" target="_blank">
+          <img src="https://www.codewars.com/users/cmaroblesg/badges/micro?theme=light" alt="Codewars Badge">
+        </a>
+      </li>
     </ul>
   </div>
 {%- endif %}
