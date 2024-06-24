@@ -8,7 +8,7 @@ author: César Robles
 ---
 Burnout is a state of physical, emotional, and mental exhaustion caused by prolonged stress, particularly in the workplace. It can have severe consequences on both individuals and organisations.
 
-![Burnout by DALL-E](imag/burnout.jpg)
+![Burnout by DALL-E](/imag/post_images/burnout.jpg)
 
 ## Consequences of Burnout
 1. **Physical Health Issues**:
