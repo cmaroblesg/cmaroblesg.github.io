@@ -51,4 +51,3 @@ Generative AI offers transformative potential, but its responsible deployment re
 1. [Evaluating Data Governance Success: Key Metrics and KPIs for Effective Strategy Tracking](https://www.linkedin.com/pulse/evaluating-data-governance-success-key-metrics-uojac/)
 2. [IBM’s Ethical AI Principles](https://www.ibm.com/artificial-intelligence/ethics)
 3. [AI Governance and Ethics](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/the-ethical-imperative-in-the-ai-age)
----
