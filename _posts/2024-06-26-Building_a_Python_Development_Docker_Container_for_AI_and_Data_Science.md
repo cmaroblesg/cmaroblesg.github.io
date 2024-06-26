@@ -7,6 +7,7 @@ tags: [Docker]
 author: César Robles
 ---
 Creating a robust development environment is crucial for AI and data science projects. Here’s how you can build a Docker container with Python 3.12, essential libraries, Jupyter Lab, and Visual Studio Code.
+![Containers - DALL-E 3.0](/imag/post_images/containers.jpg)
 
 ## Dockerfile
 
