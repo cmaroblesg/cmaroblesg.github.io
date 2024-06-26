@@ -52,7 +52,7 @@ By following these steps, you can easily import and process data from Excel file
 
 ## Annexes
 * [Netflix Top 10 Weekly Dataset](/codes/excel_dataframes/data/Netflix Top 10 Weekly Dataset.xlsx)
-* [Code](/codes/excel_dataframes/dataframes_example.ipynb)
+* [Code](/codes/excel_dataframes)
 
 ## References
 - [pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
