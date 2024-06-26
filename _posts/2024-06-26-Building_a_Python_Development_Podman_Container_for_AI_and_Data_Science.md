@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Building a Python Development Podman Container for AI and Data Science"
 categories: [Containers]
-tags: [Docker]
+tags: [Podman]
 author: César Robles
 ---
 Creating a robust development environment is crucial for AI and data science projects. Here’s how you can build a Podman container with Python 3.12, essential libraries, Jupyter Lab, and Visual Studio Code.
