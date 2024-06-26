@@ -2,8 +2,8 @@
 layout: post
 toc: true
 title: "Building a Python Development Docker Container for AI and Data Science"
-categories: [Post]
-tags: [Free Post]
+categories: [Containers]
+tags: [Docker]
 author: César Robles
 ---
 Creating a robust development environment is crucial for AI and data science projects. Here’s how you can build a Docker container with Python 3.12, essential libraries, Jupyter Lab, and Visual Studio Code.
