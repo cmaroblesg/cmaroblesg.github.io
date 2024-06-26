@@ -49,8 +49,8 @@ df
 By following these steps, you can easily import and process data from Excel files using Python's powerful DataFrame functionality provided by the pandas library. This approach streamlines data handling, making it more efficient and accessible for analysis and manipulation.
 
 ## Annexes
-[Netflix Top 10 Weekly Dataset](/codes/excel_dataframes/data/Netflix Top 10 Weekly Dataset.xlsx)
-[Code](/codes/excel_dataframes/dataframes_example.ipynb)
+* [Netflix Top 10 Weekly Dataset](/codes/excel_dataframes/data/Netflix Top 10 Weekly Dataset.xlsx)
+* [Code](/codes/excel_dataframes/dataframes_example.ipynb)
 
 ## References
 - [pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
