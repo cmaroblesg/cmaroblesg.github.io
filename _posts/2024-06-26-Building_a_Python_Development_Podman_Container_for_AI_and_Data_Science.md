@@ -1,7 +1,7 @@
 ---
 layout: post
 toc: true
-title: "Building a Python Development Docker Container for AI and Data Science"
+title: "Building a Python Development Podman Container for AI and Data Science"
 categories: [Containers]
 tags: [Docker]
 author: César Robles
