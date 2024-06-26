@@ -8,6 +8,8 @@ author: César Robles
 ---
 In today’s data-driven world, efficiently managing and processing data is crucial for success. Whether you’re working on a data science project, performing data analysis, or managing large datasets, knowing how to import and manipulate data using Python is a valuable skill. This guide will show you how to import Excel files into Python using DataFrames, making your data processing tasks quicker and more efficient. By mastering these techniques, you can unlock new insights and streamline your workflow. Let's get started!
 
+![Python Dataframes - DALL-E 3.0](/imag/post_images/python_dataframes.jpg)
+
 ## Objective:
 - Learn how to use DataFrames to open Excel and CSV files for better and faster data processing.
 
