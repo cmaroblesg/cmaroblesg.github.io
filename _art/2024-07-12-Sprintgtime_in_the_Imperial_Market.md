@@ -6,8 +6,7 @@ tags: [Digital Art]
 author: César Robles
 date: 2024-07-12
 ---
-### Description
-*"Springtime in the Imperial Market"* vividly depicts a bustling scene from ancient China, capturing the essence of a market day under the serene blossoms of cherry trees. The artwork is characterised by its rich detail and vibrant colours, showcasing traditional architecture and the intricate garments of the market-goers. The towering pagoda in the background stands as a symbol of cultural heritage and history, overseeing the lively interactions below. This piece eloquently conveys the harmony and beauty of daily life in a bygone era, inviting the viewer to step back in time and experience the splendour of the imperial marketplace._
+**Description:** *"Springtime in the Imperial Market"* vividly depicts a bustling scene from ancient China, capturing the essence of a market day under the serene blossoms of cherry trees. The artwork is characterised by its rich detail and vibrant colours, showcasing traditional architecture and the intricate garments of the market-goers. The towering pagoda in the background stands as a symbol of cultural heritage and history, overseeing the lively interactions below. This piece eloquently conveys the harmony and beauty of daily life in a bygone era, inviting the viewer to step back in time and experience the splendour of the imperial marketplace._
 
 ![](/imag/digital_art/springtime_in_the_imperial_market.jpg)
 
