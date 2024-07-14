@@ -1,5 +1,5 @@
 ---
-layout: art
+layout: art_post
 title: "First Digital Art Post"
 date: 2024-07-14
 ---
