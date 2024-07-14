@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-# About
-
 Balancing the responsibilities of a Data Scientist Manager and Product Owner has refined my ability to merge data science with precise project management. My day-to-day activities involve collaborating with diverse teams, defining product visions, and ensuring flawless project execution. In my role, I dispel banking myths about generative AI. By introducing LLM models, I envision a banking era that leverages transformative technologies for optimal customer and employee experiences.
 
 The financial sphere, especially post-COVID-19, is in flux. I am at the forefront, guiding transitions like remote work integrations and driving digital transformations through agile methodologies. In these evolving times, adaptability isn't a choice; it's a necessity.
