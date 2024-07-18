@@ -1,6 +1,6 @@
 ---
 layout: art_post
-title: "Spring Reflections"
+title: "Autumn Serenity"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
