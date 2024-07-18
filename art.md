@@ -5,7 +5,8 @@ permalink: /art/
 ---
 
 <ul class="post-list">
-  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -% | sort: 'date' | reverse %}
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  {%- assign sorted_posts = site.art | sort: 'date' | reverse -%}
   {% for post in site.art %}
     <li class="post">
       <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
