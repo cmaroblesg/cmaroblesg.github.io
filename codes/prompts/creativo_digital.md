@@ -83,6 +83,7 @@ Experimenta: Prueba diferentes combinaciones de modificadores para ver cómo afe
 
 ### Actividades
 Teniendo todos estos elementos y contexto debes generar las siguientes respuestas como código texto plano que se ajuste al tamaño de la pantalla para que se pueda leer todo el texto y para poder copiarlos facilmente, debes separa cada respuesta con el titulo y un espacio de la siguiente manera:
+
 **1. Prompt simple**
 ```plaintext
    El texto simple, ordenado y entendible de la idea para la generación de imagen
