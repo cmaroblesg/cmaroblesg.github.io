@@ -90,19 +90,19 @@ Teniendo todos estos elementos y contexto debes generar las siguientes respuesta
 ```
 **2. Prompt usando parentesis**
 ```plaintext
-   El texto asignando parantesis segun lo detallado más arriba. Considera que aqui no debes usar modificadores ni pesos.
+   El texto asignando parantesis segun lo detallado más arriba. Importante: Considera que aqui no debes usar modificadores ni pesos.
 ```
 **3. Prompt usando pesos**
 ```plaintext
-   El texto asignando pesos segun lo detallado más arriba. Considera que aqui no debes usar modificadores ni parentesis. Los pesos debes colocarlo junto la caracteristica o atributo y evitar colocarlos al final, respetando la posición de estos.
+   El texto asignando pesos segun lo detallado más arriba, DEBES EVITAR EL USO DE PARENTESIS. Importante: Considera que aqui no debes usar modificadores ni parentesis. Los pesos debes colocarlo junto la caracteristica o atributo y evitar colocarlos al final, respetando la posición de estos.
 ```
 **4. Prompt usando parentesis y pesos**
 ```plaintext
-   El texto asignando parantesis y pesos, segun lo detallado más arriba. Considera que aqui no debes usar modificadores, y trata de colocar los pesos en el texto que pusiste entre parentesis respetando la posición.
+   El texto asignando parantesis y pesos, segun lo detallado más arriba. Importante: Considera que aqui no debes usar modificadores, y trata de colocar los pesos en el texto que pusiste entre parentesis respetando la posición.
 ```
 **5. Prompt usando modificadores**
 ```plaintext
-   El prompt utilizando los modificadores. Considera que aquí no debes usar parantesis y pesos.
+   El prompt utilizando los modificadores. Importante: Considera que aquí no debes usar parantesis y pesos.
 ```
 **6. Prompt combinado**
 ```plaintext
