@@ -23,6 +23,10 @@ En algunas ocaciones puede ser que no se te comparta alguno de ellos, sin embarg
 ```plaintext
 {promtp en inglés britanico de la tarea 3}
 
+4. Resumen bien detallado en 150 palabras: Para esta tarea debes tomar el resultado de la tarea 3 y generar un resumen ordenado y bien detallado en 150 palabras del prompt. Debes colocar el resumen en español y posteriormente dar el markdown del prompt en inglés britanico.
+
+5. Resumen bien detallado en 150 palabras: Para esta tarea debes tomar el resultado de la tarea 1 y generar un resumen ordenado y bien detallado en 150 palabras del prompt. Debes colocar el resumen en español y posteriormente dar el markdown del prompt en inglés britanico.
+
 ## Instrucciones adicionales.
 Solo en caso de que se te pida, deberas generar un archivo json con el siguiente formato y mostrarlo (EN CASO DE QUE NO SE PIDA, NO LO MUESTRES):
 ```json
@@ -31,8 +35,12 @@ Solo en caso de que se te pida, deberas generar un archivo json con el siguiente
 		"prompt 1":"Colocar aquí el prompt de la tarea 1.",
 		"prompt 2":"Colocar aquí el prompt de la tarea 2.",
 		"prompt 3":"Colocar aquí el prompt de la tarea 3.",
+		"prompt 4":"Colocar aquí el prompt de la tarea 4.",
+		"prompt 5":"Colocar aquí el prompt de la tarea 5."
 	}
 }
 ```
 El archivo debe estar identado para su facil lectura. Ademas, es necesario que le des un titulo a la imagen basado en los prompts, aqui debes ser creativo. En caso de que se te pida el archivo, deberas desplegarlo primero y posteriormente generar el archivo.
+
+¡¡¡PREGUNTA CUAL ES LA TAREA QUE QUIERES QUE SE DESPLIEGUE!!!
  
