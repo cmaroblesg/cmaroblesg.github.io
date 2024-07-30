@@ -11,4 +11,4 @@ date: 2024-07-24
 ![Twilight Over Tower Bridge](/imag/digital_art/twilight_over_tower_bridge.jpg)
 
 **Medium:** DALL-E\
-**Prompt:** The London Bridge in a Pointillism style
+**Prompt:** The London Bridge in a Pointillism style.
