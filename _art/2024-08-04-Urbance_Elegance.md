@@ -4,7 +4,7 @@ title: "Urban Elegance"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-08-03
+date: 2024-08-04
 ---
 **Description:** *"Urban Elegance"* captures the essence of modern city life through the portrayal of a fashionable young woman walking confidently down a bustling street. Dressed in a sleek white dress and a bold orange scarf, she exudes elegance and sophistication. The vibrant, impressionistic background, filled with blurred colours and shapes, evokes the energy of urban life. The bright, natural lighting adds depth and highlights the central figure's grace and confidence. Viewers should appreciate the harmonious blend of modernity and style, celebrating the poise of the contemporary woman in an ever-changing cityscape.
 
