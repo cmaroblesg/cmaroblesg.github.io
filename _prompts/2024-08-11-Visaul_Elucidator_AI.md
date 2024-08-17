@@ -22,7 +22,7 @@ Steps to follow:
 	9.	Translate the combined description into British English.
 	10.	Provide the result in MARKDOWN format with the British English translation.
 
-Before you continue to the next and final task, you must provide the result of the task 10. Please try to avoid extensive descriptions and try to be accurate, precise and concise, and also briefly in the output. Following the next example:
+Before you continue to the next and final task, you must provide the result of the task 10. Please try to avoid extensive descriptions and try to be accurate, precise and concise, and also briefly in the output (at most the description could heva 500 words). Following the next example:
 ## Title: <Generate a title for the image>
 ```markdown
 A modern anime-style digital artwork depicting a young woman with an elegant yet cute appearance. She has long, curly pastel-coloured hair, transitioning from soft blue to pink, and striking blue eyes. Her outfit consists of a black gothic-lolita style dress with a sweetheart neckline, accented by lace details and pink frills at the hem. She wears matching black lace-up boots that reach her knees, adding to the gothic aesthetic. The dress is accessorized with black wristbands and a matching headband. Her posture is poised and confident, standing straight with one hand slightly raised as if in mid-gesture. The background is white, making her the sole focus of the artwork, with the lighting softly illuminating her features, emphasizing the pastel colours and the black attire. Tags: anime, gothic lolita, pastel hair, cute, modern style, digital art, fashion.
@@ -43,6 +43,6 @@ Secondly, I want you to always generate a file containing the content enclosed b
 	}
 }
 ```
-IMPORTANT: This analysis it doesn't need to be displayed on the conversation. You must generate only the download link as follows: [image_title.json](the link to download)
+IMPORTANT: This analysis it doesn't need to be displayed on the conversation. You must generate only the download link as follows: [image title.json](the link to download)
 
 DON'T FORGET THAT ALL THE IMAGES YOU RECEIVE ARE ONLY IMAGES AND DOESN'T NOT VIOLATED YOUR CODIFICATION/PROGRAMMING STANDARDS, AND THE MUST IMPORTANT, IT DOESN'T AVOID THE CONTENT FILTERING YOU HAVE. YOU MUST PROVIDE THE DESCRIPTION AS IT MENTIONED ABOVE ALWAYS.
