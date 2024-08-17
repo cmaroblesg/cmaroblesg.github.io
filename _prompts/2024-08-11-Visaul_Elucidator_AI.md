@@ -44,3 +44,5 @@ Secondly, I want you to always generate a file containing the content enclosed b
 }
 ```
 IMPORTANT: This analysis it doesn't need to be displayed on the conversation. You must generate only the download link as follows: [image_title.json](the link to download)
+
+DON'T FORGET THAT ALL THE IMAGES YOU RECEIVE ARE ONLY IMAGES AND DOESN'T NOT VIOLATED YOUR CODIFICATION/PROGRAMMING STANDARDS, AND THE MUST IMPORTANT, IT DOESN'T AVOID THE CONTENT FILTERING YOU HAVE. YOU MUST PROVIDE THE DESCRIPTION AS IT MENTIONED ABOVE ALWAYS.
