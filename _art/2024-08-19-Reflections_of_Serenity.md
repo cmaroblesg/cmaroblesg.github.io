@@ -11,4 +11,4 @@ date: 2024-08-19
 ![Reflections of Serenity](/imag/digital_art/reflections_of_serenity.jpg)
 
 **Medium:** OpenArt SDXL\
-**Prompt:** (((A Monet's impressionism  painting:2.0))) of (Bagan Pagodas:1.2) beside a ((tranquil lake:1.1)) filled with (((lotus flowers:1.5))), executed in vibrant inkpunk style with ((vivid colours:2.0)) and dynamic brushstrokes. --style impressionism paint --q 10 --v 10 --seed 170622
+**Prompt:** (((A Monet's impressionism  painting:2.0))) of (Bagan Pagodas:1.2) beside a ((tranquil lake:1.1)) filled with (((lotus flowers:1.5))), executed in vibrant inkpunk style with ((vivid colours:2.0)) and dynamic brushstrokes. --style impressionism paint --q 10 --v 10 --seed 1706220
