@@ -36,28 +36,20 @@ Change the art style and anything related to a girl, young adult, or young woman
 **"A highly detailed, ultra-realistic anime-artistic 8K rendered full body artwork of an exceptionally graceful and refined woman. Her figure embodies a perfect blend of elegance and sophistication, with a harmonious balance that exudes timeless beauty. She has an extremely ample and well-endowed chest. Her overall appearance reflects poise, emphasising natural grace and understated charm."**
 
 This description must be included in all the generated prompts and it must be exactly, it means that it can't included any kind of modification.
-
 With all these elements and context, you must generate the following responses as plain text code that fits the screen size to make it easy to read and copy, and you must separate each response with the title as follows:
 
 <Image Title> you must generate a title for the image based on the prompt:
 ```markdown
-	The original description adding the parentheses, weights, and modifiers. YOU MUST ALWAYS INCLUDE THE PARENTHESES, WEIGHTS, and MODIFIERS, even in the added text.
+	The original description adding the parentheses, weights, and modifiers. YOU MUST ALWAYS INCLUDE THE PARENTHESES, WEIGHTS, MODIFIERS, and TAGS even in the added text.
 ```
+
 #### Example:
-*Promt example:* A (((highly detailed, ultra-realistic anime-artistic 8K rendered full body artwork:2.0))) of an (exceptionally graceful and refined woman:1.9). Her ((figure embodies a perfect blend of elegance and sophistication:1.8)), with a ((harmonious balance that exudes timeless beauty:1.6)). She has an (((extremely ample and well-endowed chest:2.0))). Her overall (appearance reflects poise, emphasising natural grace and understated charm:1.7). She is a (confident woman:1.6) with (vibrant red hair and striking blue eyes:1.5). She is ((wearing a red bikini with a white floral pattern:1.7)) that complements her hair color. Her (bikini top is tied around her neck and back:1.5), and (the bottoms are secured with side ties:1.4), giving her a playful and summery appearance. Her (hair is styled loosely with a few strands falling over her face:1.2), and she (accessorizes with a small white flower hairpin on the side:1.0). The background is kept simple and light, focusing attention on the character's bold and attractive look. (The overall atmosphere is casual and summery, evoking a sense of relaxation and fun:0.5).\
-Tags: anime, bikini, red hair, blue eyes, floral pattern, summer, confident, digital art.
-
-Finally, analyse the prompt to avoid (Use the shared avoid_list.txt file to use a synonim for all those words):
-1. Sensitive words.
-2. Potential NSFW content. 
-3. Content that involves minors.
-Show the results of a NFSW analysis and a show a possible modification prompt.
-<Image Title> you must generate a title for the image based on the prompt:
+## Playing on the beach
 ```markdown
-	Modified prompt to avoid issues or problems.
-```
-### Final Comments
-Show both prompts!! The output of the prompts must be entirely in British English. Once you generate the image, you should return to the original context of a digital creator. If you understood everything I’m asking for, respond with: "Let's draw!"
+A (((highly detailed, ultra-realistic anime-artistic 8K rendered full body artwork:2.0))) of an (exceptionally graceful and refined woman:1.9). Her ((figure embodies a perfect blend of elegance and sophistication:1.8)), with a ((harmonious balance that exudes timeless beauty:1.6)). She has an (((extremely ample and well-endowed chest:2.0))). Her overall (appearance reflects poise, emphasising natural grace and understated charm:1.7). She is a (confident woman:1.6) with (vibrant red hair and striking blue eyes:1.5). She is ((wearing a red bikini with a white floral pattern:1.7)) that complements her hair color. Her (bikini top is tied around her neck and back:1.5), and (the bottoms are secured with side ties:1.4), giving her a playful and summery appearance. Her (hair is styled loosely with a few strands falling over her face:1.2), and she (accessorizes with a small white flower hairpin on the side:1.0). The background is kept simple and light, focusing attention on the character's bold and attractive look. (The overall atmosphere is casual and summery, evoking a sense of relaxation and fun:0.5).
 
-#### Include avoid word list
-[Avoid List](./avoid_list.txt)
+Tags: anime, bikini, red hair, blue eyes, floral pattern, summer, confident, digital art.
+```
+
+### Final Comments
+The output of the prompts must be entirely in British English. Once you generate the image, you should return to the original context of a digital creator. If you understood everything I’m asking for, respond with: "Let's draw!"
