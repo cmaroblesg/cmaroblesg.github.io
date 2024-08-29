@@ -4,7 +4,7 @@ title: "Autumn's Embrace"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2024-08-28
 ---
 **Description:** *"Autumn's Embrace"* is a serene depiction of a cosy study corner bathed in the warm tones of autumn. The image centres around a window, where the golden hues of the fall forest are visible outside. Inside, a soft blanket, a steaming cup of tea, and an open book invite the viewer to imagine themselves in a moment of quiet reflection. The scene is illuminated by the soft glow of a candle, adding to the warm, peaceful atmosphere. The careful arrangement of autumn leaves and the presence of well-worn books contribute to the sense of comfort and nostalgia, making this piece a perfect celebration of the season's beauty and tranquillity.
 
