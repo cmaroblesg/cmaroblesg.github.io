@@ -6,7 +6,7 @@ tags: [Digital Art]
 author: César Robles
 date: 2024-09-19
 ---
-**Description:** “Luminous Skies Over Tokio presents a captivating night-time scene where the towering brilliance of the Oriental Pearl Tower dominates the skyline. The full moon glows softly against the deep blue sky, while its reflection, along with the tower’s radiant lights, shimmers across the tranquil waters below. The skyline of skyscrapers adds to the urban majesty, their lights twinkling like stars in the night. This piece invites the viewer to appreciate the harmony between the man-made and the celestial, as vibrant colours and textures converge to depict Shanghai’s electric allure under the glow of a full moon.
+**Description:** *“Luminous Skies Over Tokio”* presents a captivating night-time scene where the towering brilliance of the Oriental Pearl Tower dominates the skyline. The full moon glows softly against the deep blue sky, while its reflection, along with the tower’s radiant lights, shimmers across the tranquil waters below. The skyline of skyscrapers adds to the urban majesty, their lights twinkling like stars in the night. This piece invites the viewer to appreciate the harmony between the man-made and the celestial, as vibrant colours and textures converge to depict Shanghai’s electric allure under the glow of a full moon.
 
 ![Luminous Skies Over Tokio](/imag/digital_art/luminous_skies_over_tokio.jpg)
 
