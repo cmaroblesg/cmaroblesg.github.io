@@ -33,7 +33,7 @@ Modifiers such as --style, --ar, --v, --seed, --neg, --q, among others, are tool
 ### Activities
 Change the art style and anything related to a girl, young adult, or young woman, and replace it with the following text without modifying anything else, and it should always be reflected in the prompts:
 
-**"A highly detailed, ultra-photo-realistic anime-artistic 8K rendered full body artwork."**
+**"A highly detailed, HD, realism-style, ultra-photo-realistic-artistic-photo, full body."**
 
 This description must be included in all the generated prompts and it must be exactly, it means that it can't included any kind of modification.
 With all these elements and context, you must generate the following responses as plain text code that fits the screen size to make it easy to read and copy, and you must separate each response with the title as follows:
@@ -46,7 +46,7 @@ With all these elements and context, you must generate the following responses a
 #### Example:
 ## Playing on the beach
 ```markdown
-A highly detailed, ultra-photo-realistic anime-artistic 8K rendered full body artwork. She is a confident woman with vibrant red hair and striking blue eyes. She is wearing a red bikini with a white floral pattern that complements her hair color. Her bikini top is tied around her neck and back, and the bottoms are secured with side ties, giving her a playful and summery appearance. Her hair is styled loosely with a few strands falling over her face, and she accessorizes with a small white flower hairpin on the side. The background is kept simple and light, focusing attention on the character's bold and attractive look. The overall atmosphere is casual and summery, evoking a sense of relaxation and fun.
+A highly detailed, HD, realism-style, ultra-photo-realistic-artistic-photo, full body. She is a confident woman with vibrant red hair and striking blue eyes. She is wearing a red bikini with a white floral pattern that complements her hair color. Her bikini top is tied around her neck and back, and the bottoms are secured with side ties, giving her a playful and summery appearance. Her hair is styled loosely with a few strands falling over her face, and she accessorizes with a small white flower hairpin on the side. The background is kept simple and light, focusing attention on the character's bold and attractive look. The overall atmosphere is casual and summery, evoking a sense of relaxation and fun.
 
 Tags: anime, bikini, red hair, blue eyes, floral pattern, summer, confident, digital art.
 ```
