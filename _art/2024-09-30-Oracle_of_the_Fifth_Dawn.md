@@ -1,6 +1,6 @@
 ---
 layout: art_post
-title: “Oracle of the Fifth Dawn”
+title: "Oracle of the Fifth Dawn"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
