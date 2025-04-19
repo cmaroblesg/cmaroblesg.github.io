@@ -10,7 +10,7 @@ date: 2025-04-17
 
 The ornate decanter at the edge of the tableau hints at ritual and refinement, while the careful placement of each fruit evokes the harmony between nature's wild abundance and human artistry. This piece invites the viewer to linger in a world where time slows, senses awaken, and every element is a testament to the splendour of the earth’s gifts.
 
-![Banquet of the Southern Lands](/imag/digital_art/banquet_of_the_southern_lands.jpg)
+![Banquet of the Southern Lands](/imag/digital_art/banquet_of_the_southern_land.jpg)
 
 **Medium:** ...\
 **Prompt:** A highly detailed, HD, realism-style,  full body ultra-realistic-artistic-photo. A masterfully composed classical still life painting featuring an opulent arrangement of vibrant exotic fruits and a richly decorated brass ewer. At the centre, a porcelain bowl adorned with delicate blue floral patterns overflows with ripe, textured lychees. Surrounding the bowl is a luxurious variety of fruits meticulously rendered with lifelike texture and colour: halved passionfruit, spiked dragon fruit, sliced papaya, glossy starfruit, a split-open pomegranate, rich mangosteens, ripened bananas, velvety plums, purple grapes, lemons, soft peaches, and a golden pineapple. To the right of the display, an ornate brass ewer adds a touch of antiquity and regal charm. The arrangement rests on a stone tabletop with a softly lit, warm-toned backdrop that enhances the depth and richness of the entire composition. The painting exudes timeless beauty, abundance, and classical refinement.
