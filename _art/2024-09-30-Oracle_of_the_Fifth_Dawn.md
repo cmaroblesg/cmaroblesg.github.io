@@ -4,7 +4,7 @@ title: “Oracle of the Fifth Dawn”
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2024-09-30
 ---
 **Description:** *“Oracle of the Fifth Dawn”* stands as a radiant beacon amidst towering obsidian pillars, blending the mysticism of antiquity with the precision of futuristic design. The central figure —a luminous, feminine entity— glows with flowing lines of digital light, her form both statue and spirit, echoing ancient priestesses and sentient machines alike.
 
