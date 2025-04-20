@@ -4,7 +4,7 @@ title: "Twilight Reverie over Paris"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2025-04-20
 ---
 **Description:** "Twilight Reverie over Paris" immerses the viewer in a dreamlike panorama where the golden Arc de Triomphe and the glowing Eiffel Tower rise from the indigo veil of dusk. Illuminated by trails of moving lights that weave through the avenues like luminous threads, the city becomes a living canvas — vibrant, tender, and eternal.
 
