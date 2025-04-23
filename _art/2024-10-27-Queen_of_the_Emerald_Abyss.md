@@ -4,7 +4,7 @@ title: "Queen of the Emerald Abyss"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-10-17
+date: 2024-10-27
 ---
 **Description:** *“Queen of the Emerald Abyss”* portrays a marine sovereign whose presence embodies both beauty and command. Surrounded by multicoloured corals and bathed in the filtered light of the ocean, she holds a trident that symbolises her bond with the ancestral forces of the sea. Her serene elegance contrasts with the vivid, living environment, and her richly adorned attire suggests an ancient and majestic heritage. The viewer should appreciate the meticulous detail, the use of underwater light, and the seamless fusion of mythology and realism in this enchanted scene.
 
