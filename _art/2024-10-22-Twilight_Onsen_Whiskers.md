@@ -4,7 +4,7 @@ title: "Twilight Onsen Whiskers"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-10-06
+date: 2024-10-22
 ---
 **Description:** “Twilight Onsen Whiskers” captures a magical moment of feline serenity amid a backdrop of volcanic grandeur. As the sun sets behind the mountains, a group of kittens tends to a peaceful bath ritual. One lounges contentedly in the warm water, towel upon head, while others assist with playful devotion—pouring, observing, and decorating the tub with vivid blossoms.
 
