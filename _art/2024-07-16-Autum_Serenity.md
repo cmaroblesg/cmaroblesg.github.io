@@ -4,7 +4,7 @@ title: "Autumn Serenity"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-07-17
+date: 2024-07-16
 ---
 **Description:** *“Autumn Serenity”* invites viewers to immerse themselves in the tranquil beauty of a traditional Asian landscape at dusk. The scene features elegant pagodas with intricately curved roofs, standing gracefully beside a calm river. Surrounding the pagodas, trees adorned with vibrant autumn leaves in shades of orange and red create a warm and inviting atmosphere. In the background, a majestic mountain with a pagoda perched atop adds a sense of grandeur and depth. The sky, painted in soft pastel hues of pink, orange, and blue, reflects the setting sun’s gentle glow. The serene river mirrors the pagodas and autumn foliage, enhancing the peaceful and picturesque ambiance. A solitary figure on the riverbank adds a touch of contemplation, inviting viewers to pause and reflect on the serene beauty of the scene.
 

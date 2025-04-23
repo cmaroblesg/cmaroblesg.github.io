@@ -4,7 +4,7 @@ title: "Guardian of the Future"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-07-14
+date: 2024-07-15
 ---
 **Description:** *“Guardian of the Future”* transports us to an era where technology and nature coexist in perfect harmony. The robotic female figure, adorned with a white and orange armour, embodies strength and elegance. The backdrop of futuristic skyscrapers and vibrant flora symbolises nature's resilience in a technological world. This piece evokes a sense of hope and wonder, inviting the viewer to envision a future where progress and nature dance in perfect synchrony.
 
