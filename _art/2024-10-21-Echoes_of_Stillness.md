@@ -4,7 +4,7 @@ title: "Echoes of Stillness"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2025-03-22
+date: 2024-10-21
 ---
 **Description:** *“Echoes of Stillness”* captures a moment of perfect alignment between body, nature, and the cosmos. A lone figure meditates upon concentric ripples drawn into a zen garden, her silhouette framed by the golden light of sunrise. A blossoming cherry tree offers gentle contrast to the minimal architecture, symbolising the fleeting yet eternal beauty of presence. The tranquil sea and soft horizon beyond evoke peace without words. This piece reflects the profound strength in stillness, where silence becomes the loudest truth.
 
