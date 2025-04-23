@@ -4,7 +4,7 @@ title: "Quiet Mornings in Rue Lumière"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2025-11-01
+date: 2024-11-01
 ---
 **Description:** *“Quiet Mornings in Rue Lumière”* paints a tender scene of early stillness. A young woman sits alone at a café table, her gaze lost in the charm of a sun-kissed cobblestone street. Around her, blooming flowers and soft awnings infuse the morning with warmth. The untouched cups suggest a moment suspended, as if time itself were sipping from the silence. This piece captures the grace of solitude and the gentle rhythm of city life before it begins to stir.
 
