@@ -4,7 +4,7 @@ title: "The Pontiff’s Final Silence"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2025-04-25
 ---
 **Description:** *“The Pontiff’s Final Silence”* portrays with solemn grace the concluding chapter of a life devoted to sacred service. At the heart of the composition lies a pale wooden coffin, poised upon a rich crimson plinth, surrounded by cardinals and bishops in profound contemplation. The symmetrical setting and polished marble floor evoke a sense of timeless order and quiet reverence. The scarlet and violet vestments of the clergy gently contrast the stoic presence of the Swiss Guards, who stand as steadfast sentinels of tradition. At the far end, a crucifix above a modest altar anchors the composition in spiritual gravitas. Arrangements of crimson and blush roses encircle the scene, symbolising love, sacrifice, and remembrance. This evocative piece invites the viewer to reflect upon mortality, legacy, and the serene dignity of faith’s final farewell.
 
