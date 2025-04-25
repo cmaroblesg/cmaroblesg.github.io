@@ -10,7 +10,7 @@ date: 2024-12-09
 
 The houses, draped in opposing hues of teal and terracotta, frame the moment with vibrancy and contrast, suggesting an emotional duality—hope and longing, resilience and vulnerability. Each droplet of rain becomes a thread in the fabric of memory, and the viewer is gently drawn into a world where movement, colour, and emotion blend in a symphony of reflection.
 
-![Whispers in the Rain](/imag/digital_art/Whispers_in_the_Rain.jpg)
+![Whispers in the Rain](/imag/digital_art/whispers_in_the_rain.jpg)
 
 **Medium:** Dall-E\
 **Prompt:** A poised woman stands barefoot on a glistening, rain-soaked cobblestone street, her posture graceful and unyielding amidst a dreamy drizzle. She wears an extravagant, multilayered gown with flowing ruffles that cascade through vibrant hues of orange, golden yellow, and icy blue, the fabric lifting gently as if caught in a delicate breeze. Her long, dark hair clings wetly to her back, glistening under the soft ambient light, hinting that she’s been wandering through the rain. The setting is a narrow, vibrant alleyway with traditional buildings painted in rich turquoise and crimson red, their textures saturated by the rain. Potted flowers adorn window ledges and doorways, enhancing the charm and colour of the scene. Light reflects off the wet stones, creating a glimmering surface that adds to the emotional, melancholic beauty of this striking moment.
