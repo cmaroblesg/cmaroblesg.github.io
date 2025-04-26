@@ -6,7 +6,7 @@ tags: [Digital Art]
 author: César Robles
 date: 2024-12-18
 ---
-**Description:** “Whispers of the Sun” presenta un girasol glorioso, con pétalos dorados resplandecientes cubiertos de delicadas gotas de rocío. La riqueza de los matices cálidos en el fondo se funde con la serenidad de la flor, creando una escena donde la luz y la vida se entrelazan. El espectador debe apreciar la textura natural de cada pétalo y la poesía implícita en el encuentro entre la flor y el amanecer, como un homenaje a la belleza inmutable de la naturaleza.
+**Description:** “Whispers of the Sun” features a glorious sunflower, its golden petals radiant and strewn with delicate dewdrops. The richness of warm hues in the background blends with the flower’s serenity, creating a scene where light and life intertwine. The viewer is invited to appreciate the natural texture of each petal and the poetry implicit in the meeting of bloom and dawn, as an homage to the immutable beauty of nature.
 
 ![Whispers of the Sun](/imag/digital_art/whispers_of_the_sun.jpg)
 
