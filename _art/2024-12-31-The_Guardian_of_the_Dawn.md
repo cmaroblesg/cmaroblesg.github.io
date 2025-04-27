@@ -8,7 +8,7 @@ date: 2024-12-31
 ---
 **Description:** *“The Guardian of the Dawn”* captures the suspended moment between discovery and destiny. A solitary traveller gazes upon an enigmatic stone egg that cradles a dragon of light, a reflection of ancient powers long forgotten. The dawn bathes the scene in golden and blue hues, symbolising the threshold between the past and the future. The viewer is invited to linger upon the serene majesty of the landscape, the vibrant energy contained within the egg, and the silent dialogue between the traveller and the slumbering dragon, encouraging reflection upon the mysteries that await those who dare to seek them.
 
-![The Guardian of the Dawn](/imag/digital_art/The_Guardian_of_the_Dawn.jpg)
+![The Guardian of the Dawn](/imag/digital_art/the_guardian_of_the_dawn.jpg)
 
 **Medium:** Dall-E\
 **Prompt:** can you create the image for the following prompt: 
