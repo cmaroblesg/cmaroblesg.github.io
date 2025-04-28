@@ -4,7 +4,7 @@ title: "The Wisteria Passage"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2025-02-03
+date: 2025-01-03
 ---
 **Description:** *“The Wisteria Passage”* evokes the sensation of walking through a portal into a dreamlike realm, where delicacy and splendour of nature merge into a perpetual embrace. The viewer is invited to be carried away by the symphony of tones and undulating forms, feeling the promise of peace, renewal, and eternal beauty hidden among the veils of wisteria that guard the path.
 
