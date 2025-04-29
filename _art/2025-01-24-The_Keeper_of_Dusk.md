@@ -4,7 +4,7 @@ title: "The Keeper of Dusk"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-10-31
+date: 2025-01-24
 ---
 **Description:** *“The Keeper of Dusk”* presents a mystical sentinel caught between twilight and legend. Cloaked in shadow, she holds a radiant sword that splits the scene and her gaze with unwavering resolve. Behind her, a distant castle glows beneath a twilight sky, while a tree adorned with glowing lanterns whispers of forgotten lore. The air shimmers with arcane energy, hinting that this is no ordinary night. This piece embodies the spirit of guardianship, the elegance of power, and the sacred stillness before a story begins.
 
