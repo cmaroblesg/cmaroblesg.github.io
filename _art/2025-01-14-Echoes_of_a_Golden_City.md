@@ -4,7 +4,7 @@ title: "Echoes of a Golden City"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 2024-01-14
+date: 2025-01-14
 ---
 **Description:** *“Echoes of a Golden City”* portrays a utopia nestled among sunlit cliffs. Its palaces with golden domes emerge amidst blossoming gardens and crystalline fountains, creating an ethereal vision of harmony between mankind and nature. The viewer should be carried away by the golden reflections upon the water and the majesty of the architecture, which whisper tales of a lost world where beauty and peace reign supreme.
 
