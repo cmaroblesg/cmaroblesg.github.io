@@ -1,6 +1,6 @@
 ---
 layout: art_post
-title: ""
+title: "Daughter of Tide and Sky"
 categories: [Art]
 tags: [Digital ArDaughter of Tide and Skyt]
 author: César Robles
