@@ -6,7 +6,11 @@ tags: [Digital Art]
 author: César Robles
 date: 2025-05-07
 ---
-**Description:** *“Council Beneath the Heavens”*
+**Description:** *“Council Beneath the Heavens”* presents a moment of profound reverence within a chamber steeped in both artistic grandeur and spiritual authority. Rows of cardinals cloaked in crimson form two living walls that lead the viewer’s gaze to the central figures—draped in white, bearing the weight of sacred responsibility.
+
+Above, celestial frescoes cascade from the ceiling, echoing the divine presence watching over this solemn conclave. The gold and ochre tones of the walls and floor ground the composition in warmth and timelessness, while the muted expressions of the clergy evoke contemplation and unity.
+
+This masterpiece offers more than ecclesiastical ritual; it invites the beholder to reflect on the lineage of faith, the quiet power of tradition, and the intricate theatre of the divine unfolding upon earth.
 
 ![Council Beneath the Heavens](/imag/digital_art/council_beneath_the_heavens.jpg)
 
