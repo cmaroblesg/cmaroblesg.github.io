@@ -4,7 +4,7 @@ title: "Whispers of Autumn"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2025-02-21
 ---
 **Description:** *"Whispers of Autumn"* captures the quiet elegance of a fleeting moment left behind. A crimson handbag filled with golden tulips rests on a wrought-iron bench, beside a delicate cup of coffee still warm to the touch. The gentle hues of fallen leaves and a mist-veiled landscape evoke a tender nostalgia, as if the scene awaits the return of its owner.
 
