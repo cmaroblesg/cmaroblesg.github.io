@@ -4,7 +4,7 @@ title: "Silent Orbit of the Moon"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2025-03-14
 ---
 **Description:** *“Silent Orbit of the Moon”* portrays a celestial harmony where the full moon glows at the heart of concentric rings of golden clouds. These swirling layers create a hypnotic rhythm, drawing the eye into a meditative spiral of quiet majesty. On the earth below, resting beneath darkened trees, sit baskets of radiant flowers—subtle offerings to the night. The scene evokes a tranquil reverence, bridging the heavens and the earthly with an ethereal whisper.
 
