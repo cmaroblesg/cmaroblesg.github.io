@@ -8,7 +8,7 @@ date: 2025-05-16
 ---
 **Description:** *“Dawn in Silence and Steam”* evokes the tranquil beauty of early morning by a peaceful lake, where a lone coffee cup becomes a quiet witness to the birth of a new day. The golden sunlight spreads gently across the water and wooden surface, creating a warm and reflective atmosphere. Overhanging white blossoms lend a soft elegance, enhancing the harmony of the scene. The viewer is invited to appreciate the tender balance of colour and texture, and to immerse themselves in the contemplative calm of this golden hour.
 
-![Dawn in Silence and Steam](/imag/digital_art/Dawn_in_Silence_and_Steam.jog)
+![Dawn in Silence and Steam](/imag/digital_art/dawn_in_silence_and_steam.jog)
 
 **Medium:** Dall-E\
 **Prompt:** A tranquil and warm morning scene:3.0 by a calm lake:2.9, captured at the perfect moment:2.8 when the golden sunrise reflects off a cup of coffee:2.9. The cup, saucer, and wooden table:2.8 glisten in the soft sunlight:2.9, radiating a magical golden glow:3.0.
