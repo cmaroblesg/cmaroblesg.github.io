@@ -1,12 +1,14 @@
 ---
 layout: post
 toc: true
-title: "Ambiguity in LLMs and Business Impact"
+title: "📚 LLMs, Ambiguity, and Business Impact"
 categories: [Post]
 tags: [LinkedIn Post]
 author: César Robles
 ---
-#📚 LLMs, Ambiguity, and Business Impact
+Ambiguity is the silent enemy of AI accuracy. If your prompts are unclear, your Large Language Model might sound smart—but be wildly wrong. This post explores how ambiguity impacts behaviour, how you can fix it, and how businesses are turning clarity into profit and trust.
+
+![LLM Abiguity](/imag/post_images/llm_ambiguity.jpg)
 
 ## 1. How Ambiguity Affects LLM Behaviour and Accuracy
 
