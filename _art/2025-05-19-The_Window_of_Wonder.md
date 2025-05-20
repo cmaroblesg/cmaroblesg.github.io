@@ -4,7 +4,7 @@ title: "The Window of Wonder"
 categories: [Art]
 tags: [Digital Art]
 author: César Robles
-date: 1900-01-01
+date: 2025-05-19
 ---
 **Description:** *“The Window of Wonder”* portrays a kitten with mesmerising blue eyes peeking curiously from an old wooden window, framed by climbing ivy. Its delicate paws rest gently on the sill, while the warmth of the amber-toned wall and the soft lighting evoke a tender, autumnal calm. The feline’s expression exudes both innocence and intrigue, inviting the viewer to pause and share a moment of wonder. This artwork celebrates the gentle magic of quiet observation and the charm found in the simplest corners of life.
 
