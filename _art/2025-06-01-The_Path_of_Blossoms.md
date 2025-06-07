@@ -8,7 +8,7 @@ date: 2025-06-01
 ---
 **Description:** *“The Path of Blossoms”* portrays a delicate moment of curiosity and wonder as a black kitten wanders along abandoned railway tracks now overrun with vibrant wildflowers. Bathed in the soft gold of morning mist, the kitten pauses mid-step, enchanted by a fluttering butterfly. The scene, awash with warm pastels and blooming life, evokes a gentle sense of adventure. This piece captures the spirit of innocent exploration and the quiet poetry of places reclaimed by nature and transformed into something magical.
 
-![The Path of Blossoms](/imag/digital_art/The_Path_of_Blossoms.jpg)
+![The Path of Blossoms](/imag/digital_art/the_path_of_blossoms.jpg)
 
 **Medium:** Dall-E\
 **Prompt:** A whimsical, impressionistic digital painting:2.9 portraying a small black kitten walking gracefully along an old wooden railway track:2.8, now completely overtaken by wildflowers and vibrant nature:2.9. The path is bordered by lush blooms in vivid pink, purple, orange, and yellow shades:2.8, creating a dreamy, enchanted setting:2.7.
