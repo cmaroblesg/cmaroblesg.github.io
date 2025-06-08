@@ -10,6 +10,8 @@ We’ve reached a turning point in the world of generative AI. According to Gart
 
 But make no mistake: the next five years will be *far from stagnant*. Instead, we’re entering a period of **profound change**, powered by next-gen technologies that will redefine the global banking landscape.
 
+![Beyond the Peak of Generative AI: What’s Next for Banking?](/imag/post_images/peak_generative.jpg)
+
 Here’s a look at the tech trends set to shape banking between now and 2030:
 ---
 ## 🧠 1. AI Evolves: From Chatbots to Reasoning Agents
