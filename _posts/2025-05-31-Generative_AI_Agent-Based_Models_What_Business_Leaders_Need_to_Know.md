@@ -6,7 +6,6 @@ categories: [Post]
 tags: [LinkedIn Post]
 author: César Robles
 ---
-
 In today’s fast-evolving tech landscape, two concepts are rising to prominence in the business world: **generative artificial intelligence (AI)** and **agent-based models**. As a business leader, you’ve likely heard the buzz around these terms. But what exactly are they, why do they matter for your business, and how can you start leveraging them? In this thought-leadership post, we’ll demystify these technologies in plain language and explore how they can drive innovation and decision-making in a business context. Let’s dive in.
 
 ---
