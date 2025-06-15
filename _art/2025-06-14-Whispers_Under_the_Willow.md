@@ -8,7 +8,7 @@ date: 2025-06-14
 ---
 **Description:** *“Whispers Under the Willow”* captures a moment of intimate stillness as a young woman reclines beneath a grand tree by the water’s edge. Bathed in dappled sunlight and surrounded by a lush tapestry of greens and blues, she becomes part of the landscape—an emblem of harmony and repose. Her relaxed pose and serene gaze suggest a silent dialogue with nature. The scene, suffused with golden light, invites the viewer to pause, breathe, and find beauty in the simplicity of being.
 
-![Whispers Under the Willow](/imag/digital_art/whispers_under_the_willow.jpeg)
+![Whispers Under the Willow](/imag/digital_art/whispers_under_the_willow.jpg)
 
 **Medium:** Dall-E\
 **Prompt:** A romantic scene of a young woman reclining under the shade of a large tree by a vibrant turquoise river:3.0. The scene is sun-drenched and dappled with shadows cast by the surrounding foliage:2.9. She wears a loosely tied emerald green blouse and denim shorts, exuding a relaxed and confident charm:2.9. Her gaze is directed towards the viewer with a gentle, inviting smile:2.8.
