@@ -7,8 +7,6 @@ tags: [LinkedIn Post]
 author: César Robles
 ---
 
-## Generative AI & Agent-Based Models: What Business Leaders Need to Know
-
 In today’s fast-evolving tech landscape, two concepts are rising to prominence in the business world: **generative artificial intelligence (AI)** and **agent-based models**. As a business leader, you’ve likely heard the buzz around these terms. But what exactly are they, why do they matter for your business, and how can you start leveraging them? In this thought-leadership post, we’ll demystify these technologies in plain language and explore how they can drive innovation and decision-making in a business context. Let’s dive in.
 
 ---
@@ -81,7 +79,7 @@ Generative AI and agent-based modelling are poised to reshape how we solve busin
 
 ### References
 
-[^1]: Bain & Company, “Survey: Generative AI’s Uptake Is Unprecedented Despite Roadblocks,” May 7, 2025. https://www.bain.com/insights/survey-generative-ai-uptake-is-unprecedented-despite-roadblocks/  
-[^2]: ResearchGate, “Agent-Based Modeling and Simulation For Business and Management: A Review and Tutorial,” 2024. https://www.researchgate.net/publication/358820826_Agent-Based_Modeling_and_Simulation_For_Business_and_Management_A_Review_and_Tutorial  
-[^3]: Arthur J. Gallagher & Co., “AI Adoption Without Losing the Human Touch (2025 Attitudes to AI Adoption and Risk Benchmarking Survey),” December 2024. https://www.ajg.com/im/news-and-insights/features/ai-adoption-without-losing-the-human-touch/  
-[^4]: North CM & Macal CJ, “Agent-based modelling: Methods and techniques for simulating human systems,” *Proceedings of the National Academy of Sciences*, 2008. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC128598/  
+[^1]: Bain & Company, “Survey: Generative AI’s Uptake Is Unprecedented Despite Roadblocks,” May 7, 2025. (https://www.bain.com/insights/survey-generative-ai-uptake-is-unprecedented-despite-roadblocks/)[https://www.bain.com/insights/survey-generative-ai-uptake-is-unprecedented-despite-roadblocks/]  
+[^2]: ResearchGate, “Agent-Based Modeling and Simulation For Business and Management: A Review and Tutorial,” 2024. (https://www.researchgate.net/publication/)[https://www.researchgate.net/publication/]358820826_Agent-Based_Modeling_and_Simulation_For_Business_and_Management_A_Review_and_Tutorial  
+[^3]: Arthur J. Gallagher & Co., “AI Adoption Without Losing the Human Touch (2025 Attitudes to AI Adoption and Risk Benchmarking Survey),” December 2024. (https://www.ajg.com/im/news-and-insights/features/ai-adoption-without-losing-the-human-touch/)[https://www.ajg.com/im/news-and-insights/features/ai-adoption-without-losing-the-human-touch/]  
+[^4]: North CM & Macal CJ, “Agent-based modelling: Methods and techniques for simulating human systems,” *Proceedings of the National Academy of Sciences*, 2008. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC128598/)[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC128598/]  
