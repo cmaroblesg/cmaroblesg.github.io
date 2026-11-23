@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Exploring the Future of Quantum Computing: Real-World Applications and Impact — an article by César Robles."><title>Exploring the Future of Quantum Computing: Real-World Applications and Impact | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-07-26">26 July 2024</time><span>Post</span></div><h1>Exploring the Future of Quantum Computing: Real-World Applications and Impact</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>Quantum computing is no longer just a theoretical concept; it’s rapidly becoming a tangible reality with the potential to revolutionise multiple industries. In this post, we will delve into the fundamentals of quantum computing, explore real-world applications, and discuss its future impact.</p>
+<p><img src="/imag/post_images/quantum_computer.jpg" alt="Quantum Computing"></p>
+<h2 id="what-is-quantum-computing">What is Quantum Computing?</h2>
+<p>Quantum computing leverages the principles of quantum mechanics to perform calculations at speeds unimaginable with classical computers. Unlike classical bits, which are either 0 or 1, quantum bits (qubits) can exist in multiple states simultaneously, thanks to superposition and entanglement. This allows quantum computers to process vast amounts of data and solve complex problems more efficiently.</p>
+<h2 id="real-world-applications-of-quantum-computing">Real-World Applications of Quantum Computing</h2>
+<ol>
+<li>
+<p><strong>Drug Discovery and Development</strong></p>
+<p>Quantum computing can significantly accelerate the drug discovery process by simulating molecular structures and interactions at an unprecedented scale. This can lead to the development of new medications faster and at a lower cost.</p>
+<p><strong>Example:</strong> IBM’s Qiskit, an open-source quantum computing software, is being used to model chemical reactions and discover new drugs more efficiently.</p>
+</li>
+<li>
+<p><strong>Financial Modelling</strong></p>
+<p>Financial institutions can utilise quantum computing to optimise portfolios, manage risk, and perform complex calculations that are currently infeasible with classical computers.</p>
+<p><strong>Example:</strong> JPMorgan Chase is exploring quantum algorithms to improve trading strategies and risk management processes.</p>
+</li>
+<li>
+<p><strong>Optimisation Problems</strong></p>
+<p>Many industries face complex optimisation problems, from logistics and supply chain management to manufacturing processes. Quantum computing can provide optimal solutions faster and more accurately.</p>
+<p><strong>Example:</strong> Volkswagen has used quantum computing to optimise traffic flow in cities, reducing congestion and improving overall efficiency.</p>
+</li>
+<li>
+<p><strong>Cryptography</strong></p>
+<p>Quantum computers have the potential to break traditional cryptographic systems, but they also offer new ways to secure data through quantum cryptography.</p>
+<p><strong>Example:</strong> The development of quantum key distribution (QKD) systems ensures secure communication channels, making it virtually impossible for hackers to intercept data.</p>
+</li>
+</ol>
+<h2 id="future-impact-and-challenges">Future Impact and Challenges</h2>
+<p>The potential impact of quantum computing is vast, but there are significant challenges to overcome, including error rates, qubit stability, and the need for specialised hardware. However, ongoing research and advancements are steadily addressing these issues.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Quantum computing holds the promise of transforming various sectors by solving problems that are currently beyond the reach of classical computers. As the technology continues to evolve, we can expect to see even more innovative applications and breakthroughs that will reshape our world.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>IBM Qiskit. (2023). Retrieved from <a href="https://qiskit.org/">IBM Qiskit</a></li>
+<li>JPMorgan Chase &#x26; Co. (2023). Exploring Quantum Computing in Financial Services. Retrieved from <a href="https://www.jpmorgan.com/">JPMorgan</a></li>
+<li>Volkswagen AG. (2023). Quantum Computing for Traffic Optimization. Retrieved from <a href="https://www.volkswagenag.com/">Volkswagen</a></li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

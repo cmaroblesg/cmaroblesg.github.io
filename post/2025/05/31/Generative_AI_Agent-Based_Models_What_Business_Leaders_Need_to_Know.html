@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Generative AI &amp; Agent-Based Models: What Business Leaders Need to Know — an article by César Robles."><title>Generative AI &amp; Agent-Based Models: What Business Leaders Need to Know | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2025-05-31">31 May 2025</time><span>Post</span></div><h1>Generative AI &amp; Agent-Based Models: What Business Leaders Need to Know</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>In today’s fast-evolving tech landscape, two concepts are rising to prominence in the business world: <strong>generative artificial intelligence (AI)</strong> and <strong>agent-based models</strong>. As a business leader, you’ve likely heard the buzz around these terms. But what exactly are they, why do they matter for your business, and how can you start leveraging them? In this thought-leadership post, we’ll demystify these technologies in plain language and explore how they can drive innovation and decision-making in a business context. Let’s dive in.</p>
+<p><img src="/imag/post_images/Agent-Based_Models.jpg" alt="Generative AI &#x26; Agent-Based Models: What Business Leaders Need to Know"></p>
+<hr>
+<h3 id="what-is-generative-ai">What is Generative AI?</h3>
+<p>Generative AI refers to a class of AI systems capable of creating new content and ideas – from drafting text to designing images or even writing code – based on patterns learned from vast data. In essence, these are “deep-learning models that can generate high-quality text, images, and other content based on the data they were trained on.”</p>
+<p><strong>Why is this a big deal?</strong><br>
+Unlike traditional AI that might categorise data or make predictions, generative AI can <em>invent</em> and <em>create</em>. For businesses, this means tasks that once required human creativity or drafting – marketing copy, product designs, software code, customer-service scripts – can now be accelerated with AI assistance. For example, OpenAI’s ChatGPT famously demonstrated how an AI can generate documents or brainstorm ideas in seconds. It’s no wonder that 70 % of business leaders believe generative AI will significantly change how their companies create, deliver, and capture value.<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></p>
+<hr>
+<h3 id="what-is-an-agent-based-model">What is an Agent-Based Model?</h3>
+<p>An <strong>agent-based model (ABM)</strong> is a way to simulate complex systems by modelling the individual parts – the “agents” – and their interactions. In simple terms, “agent-based modelling is a computational technique that mimics how an individual agent behaves within an environment to simulate the overall system behaviour.” Each agent in the model represents an independent entity (for example, a customer, a company, or a cell in a network) following certain rules or behaviours. When you let thousands of these agents interact in a virtual environment, you can observe how complex, emergent outcomes arise from many small interactions.<sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup></p>
+<p>Think of simulating a busy marketplace: each agent could be a shopper or a merchant with their own goals. An agent-based model would let you watch how their individual decisions (where to shop, what price to set) ripple out to affect market trends, supply and demand, or traffic in the store. In a business context, ABMs are powerful for understanding complex scenarios and “what-if” questions: you might simulate consumer behaviours to test a new product strategy, model how information spreads in a social network, or analyse supply-chain disruptions by having virtual “agents” (warehouses, suppliers, trucks, etc.) interact. This bottom-up approach to modelling helps reveal insights about system behaviour that traditional top-down spreadsheets or equations might miss. It’s a tool to <em>see the big picture</em> by building it from the ground up.</p>
+<hr>
+<h3 id="why-do-these-technologies-matter-for-business">Why Do These Technologies Matter for Business?</h3>
+<p>Both generative AI and agent-based models offer transformative benefits to businesses, albeit in different ways:</p>
+<ul>
+<li>
+<p><strong>Unprecedented Creativity &#x26; Productivity (Generative AI)</strong><br>
+Generative AI can automate content generation and spark innovation. It extracts insights and generates content across text, audio, images, and video – enabling everything from auto-generating marketing materials to drafting legal documents. This can dramatically speed up workflows and reduce costs. (One early adopter, a consumer goods company, used AI agents with generative AI to write blog posts, cutting content creation costs by 95 % and delivering output 50× faster!) Beyond efficiency, generative AI can help personalise customer experiences (think AI-generated product recommendations or custom advertising copy) and empower employees as a “co-pilot” for tasks like coding, data analysis, or design brainstorming.</p>
+</li>
+<li>
+<p><strong>Mastering Complexity for Smarter Decisions (Agent-Based Modelling)</strong><br>
+In an increasingly complex business environment, agent-based simulations are like high-powered flight simulators for strategy. They allow leaders to test-drive scenarios in a risk-free virtual setting. For instance, economic ABMs can simulate market dynamics or policy changes by modelling consumers, competitors, and regulators as agents. This helps in predicting outcomes of strategic moves (How might the market respond to a price change? What if a supply-chain node fails? How do customer segments influence each other’s buying behaviour?). By capturing the <em>emergent behaviour</em> of many interacting parts, ABMs provide insight into phenomena like network effects, tipping points, or bottlenecks in operations. The result is better-informed decision-making and foresight. Businesses that harness ABM can gain an edge by anticipating challenges and opportunities that aren’t obvious in aggregate data alone.</p>
+</li>
+<li>
+<p><strong>Innovation and Competitive Edge</strong><br>
+Both technologies encourage an experimentative, data-driven culture. Generative AI lowers the cost of trying out new ideas (since generating a prototype design or draft proposal is now faster), while agent-based models let you experiment with system changes before committing real resources. Early adopters of generative AI and agent-based simulations can outpace competitors by discovering efficiency gains or novel strategies. It’s telling that investment in these areas is surging – major tech players are developing AI “agents” and multi-agent systems powered by generative AI, heralding a future where autonomous AI assistants handle complex tasks. In short, leveraging these tools can keep your company at the forefront of innovation.<sup><a href="#user-content-fn-3" id="user-content-fnref-3" data-footnote-ref="" aria-describedby="footnote-label">3</a></sup></p>
+</li>
+</ul>
+<hr>
+<h3 id="how-can-leaders-start-applying-generative-ai-and-abm">How Can Leaders Start Applying Generative AI and ABM?</h3>
+<p>Adopting advanced technologies might feel daunting, but leaders can approach it strategically:</p>
+<ol>
+<li>
+<p><strong>Identify High-Impact Use Cases</strong></p>
+<ul>
+<li>Generative AI: content-heavy processes (marketing, customer service chatbots, report generation)</li>
+<li>ABM: complex decision areas (market strategy, logistics, customer interactions)</li>
+</ul>
+</li>
+<li>
+<p><strong>Start Small with Pilot Projects</strong></p>
+<ul>
+<li>Run a month-long trial of an AI writing assistant</li>
+<li>Build a simple ABM to simulate a key business scenario</li>
+</ul>
+</li>
+<li>
+<p><strong>Build Skills and Awareness</strong></p>
+<ul>
+<li>Ensure your team understands these technologies and feels empowered to use them.</li>
+<li>Encourage cross-functional collaboration between business units and AI specialists.</li>
+</ul>
+</li>
+<li>
+<p><strong>Governance, Ethics, and Risk Management</strong></p>
+<ul>
+<li>Establish human review for AI outputs to avoid “hallucinations.”</li>
+<li>Validate assumptions in your simulations to ensure reliable insights.</li>
+</ul>
+</li>
+<li>
+<p><strong>Align with Strategy and Culture</strong></p>
+<ul>
+<li>Tie AI initiatives to your core objectives: customer centricity, efficiency, innovation.</li>
+<li>Communicate how AI will augment human talent, not replace it.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="join-the-conversation">Join the Conversation</h3>
+<p>Generative AI and agent-based modelling are poised to reshape how we solve business problems and drive growth. Forward-thinking leaders are already experimenting in this space – and learning fast. <strong>What opportunities or concerns do you see with these technologies in your industry?</strong> I’d love to hear your thoughts and experiences. Feel free to <strong>comment</strong>, <strong>share</strong> this post with others who might be interested, or <strong>reach out</strong> directly if you want to discuss how to get started. Let’s learn from each other and navigate this new frontier together.</p>
+<blockquote>
+<p><em>Image idea:</em> A futuristic illustration of a business leader standing before a digital network of “agents” (depicted as icons or avatars), with creative content (charts, text, images) flowing out of the network – symbolising generative AI and intelligent agents working in tandem in a business environment.</p>
+</blockquote>
+<hr>
+<h3 id="references">References</h3>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>Bain &#x26; Company, “Survey: Generative AI’s Uptake Is Unprecedented Despite Roadblocks,” May 7, 2025. <a href="https://www.bain.com/insights/survey-generative-ai-uptake-is-unprecedented-despite-roadblocks/">https://www.bain.com/insights/survey-generative-ai-uptake-is-unprecedented-despite-roadblocks/</a> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-2">
+<p>ResearchGate, “Agent-Based Modeling and Simulation For Business and Management: A Review and Tutorial,” 2024. <a href="https://www.researchgate.net/publication/358820826_Agent-Based_Modeling_and_Simulation_For_Business_and_Management_A_Review_and_Tutorial">https://www.researchgate.net/publication/358820826_Agent-Based_Modeling_and_Simulation_For_Business_and_Management_A_Review_and_Tutorial</a> <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-3">
+<p>Arthur J. Gallagher &#x26; Co., “AI Adoption Without Losing the Human Touch (2025 Attitudes to AI Adoption and Risk Benchmarking Survey),” December 2024. <a href="https://www.ajg.com/im/news-and-insights/features/ai-adoption-without-losing-the-human-touch/">https://www.ajg.com/im/news-and-insights/features/ai-adoption-without-losing-the-human-touch/</a> <a href="#user-content-fnref-3" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

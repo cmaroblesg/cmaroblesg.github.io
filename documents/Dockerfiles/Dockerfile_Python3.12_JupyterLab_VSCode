@@ -1,0 +1,29 @@
+# Utilizar una imagen base oficial de Python 3.12
+FROM python:3.12-slim
+
+# Actualizar e instalar dependencias necesarias
+RUN apt-get update && \
+    apt-get install -y wget git curl build-essential && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Establecer el directorio de trabajo
+WORKDIR /workspace
+
+# Instalar Jupyter Lab
+RUN pip install --upgrade pip && \
+    pip install jupyterlab
+
+# Instalar code-server (Visual Studio Code en el navegador)
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+# Configurar code-server para ejecutarse en el puerto 8080
+RUN mkdir -p ~/.config/code-server && \
+    echo "bind-addr: 0.0.0.0:8080" > ~/.config/code-server/config.yaml
+
+# Exponer los puertos 8888 (Jupyter Lab) y 8080 (code-server)
+EXPOSE 8888
+EXPOSE 8080
+
+# Comando de inicio para ejecutar Jupyter Lab y code-server
+CMD code-server --auth none & jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root

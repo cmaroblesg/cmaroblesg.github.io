@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="🔮 Beyond the Peak of Generative AI: What’s Next for Banking? — an article by César Robles."><title>🔮 Beyond the Peak of Generative AI: What’s Next for Banking? | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2025-05-24">24 May 2025</time><span>Post</span></div><h1>🔮 Beyond the Peak of Generative AI: What’s Next for Banking?</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>We’ve reached a turning point in the world of generative AI. According to Gartner’s 2024 Hype Cycle, the technology has now slid into the <strong>“trough of disillusionment”</strong>—the phase where hype fades and real transformation begins.</p>
+<p>But make no mistake: the next five years will be <em>far from stagnant</em>. Instead, we’re entering a period of <strong>profound change</strong>, powered by next-gen technologies that will redefine the global banking landscape.</p>
+<p><img src="/imag/post_images/peak_generative.jpg" alt="Beyond the Peak of Generative AI: What’s Next for Banking?"></p>
+<h2 id="heres-a-look-at-the-tech-trends-set-to-shape-banking-between-now-and-2030">Here’s a look at the tech trends set to shape banking between now and 2030:</h2>
+<h2 id="-1-ai-evolves-from-chatbots-to-reasoning-agents">🧠 1. AI Evolves: From Chatbots to Reasoning Agents</h2>
+<p>The future of AI in banking isn’t just about larger language models. We’re moving towards <strong>AI agents that can reason, plan, and act autonomously</strong>. Think AI co-pilots for bankers, personalised financial coaches for clients, and real-time fraud detection systems.</p>
+<p>🔹 <em>Example:</em> JPMorgan Chase is investing in <strong>custom silicon and quantum computing</strong>, signalling a shift from generic tools to domain-specific, high-performance AI.</p>
+<h2 id="but-with-great-power-comes-great-responsibility-expect-tighter-ai-governance-regulatory-scrutiny-à-la-the-eu-ai-act-and-industry-standards-that-prioritise-trust-fairness-and-transparency">But with great power comes great responsibility. Expect <strong>tighter AI governance</strong>, regulatory scrutiny (à la the EU AI Act), and industry standards that prioritise <em>trust</em>, <em>fairness</em>, and <em>transparency</em>.</h2>
+<h2 id="️-2-quantum-computing-threat-and-opportunity">⚛️ 2. Quantum Computing: Threat and Opportunity</h2>
+<p>Quantum isn’t science fiction anymore. Banks are already piloting quantum algorithms for <strong>portfolio optimisation, risk modelling</strong>, and <strong>fraud detection</strong>.</p>
+<p>⚠️ <em>Security alert:</em> Quantum computing could also <em>break current encryption</em>, making <strong>post-quantum cryptography</strong> a priority by 2027.</p>
+<h2 id="-central-banks-are-calling-for-quantum-safe-infrastructures-nowbefore-the-threat-materialises">🔒 Central banks are calling for <strong>quantum-safe infrastructures</strong> now—before the threat materialises.</h2>
+<h2 id="-3-digital-currencies--tokenisation">💸 3. Digital Currencies &#x26; Tokenisation</h2>
+<p>The future of money is digital. Over two dozen central banks are expected to launch <strong>CBDCs by 2030</strong>.</p>
+<p>🔹 <em>Case in point:</em> China’s digital yuan and the European Central Bank’s digital euro initiative.</p>
+<h2 id="meanwhile-blockchain-is-enabling-tokenised-assets-and-decentralised-finance-defi-allowing-instant-settlements-and-programmable-financial-services-banks-must-prepare-to-either-integrate-or-be-disrupted">Meanwhile, blockchain is enabling <strong>tokenised assets</strong> and <strong>decentralised finance</strong> (DeFi), allowing instant settlements and programmable financial services. Banks must prepare to either integrate or be disrupted.</h2>
+<h2 id="-4-embedded-finance--open-ecosystems">🌐 4. Embedded Finance &#x26; Open Ecosystems</h2>
+<p>Banking is leaving the bank.</p>
+<p>Thanks to APIs, financial services are being embedded <strong>directly into consumer platforms</strong>: ride-hailing apps offering insurance, or retailers issuing loans at checkout.</p>
+<p>📈 Projected market size? A whopping <strong>$7 trillion by 2030</strong>.</p>
+<p>Banks must decide their role:</p>
+<ul>
+<li>Product manufacturer?</li>
+<li>Infrastructure provider?</li>
+<li>Platform orchestrator?</li>
+</ul>
+<h2 id="the-answer-may-be-all-three">The answer may be <em>all three</em>.</h2>
+<h2 id="️-5-metaverse-spatial-computing--immersive-finance">🕶️ 5. Metaverse, Spatial Computing &#x26; Immersive Finance</h2>
+<p>Immersive tech is the next frontier. By 2026, <strong>25% of people may spend an hour a day in the metaverse</strong>.</p>
+<p>👓 Imagine:</p>
+<ul>
+<li>AR overlays for budgeting while shopping</li>
+<li>VR meetings with your banker</li>
+<li>Crypto-enabled purchases in virtual worlds</li>
+</ul>
+<h2 id="banks-should-allocate-innovation-budgets-to-test-arvr-use-cases-now-not-later">Banks should allocate innovation budgets to <strong>test AR/VR use cases now</strong>, not later.</h2>
+<h2 id="-6-cybersecurity--resilience">🔐 6. Cybersecurity &#x26; Resilience</h2>
+<p>With more tech comes more risk.</p>
+<p>AI, open APIs, and quantum computing create new threat surfaces. Banks must:</p>
+<ul>
+<li>Invest in <strong>zero-trust architectures</strong></li>
+<li>Deploy <strong>AI-driven anomaly detection</strong></li>
+<li>Adopt <strong>biometric &#x26; continuous authentication</strong></li>
+<li>Prepare for <strong>“disinformation security”</strong> against deepfakes and phishing</li>
+</ul>
+<h2 id="resilience-isnt-just-technicalits-reputational">Resilience isn’t just technical—it’s reputational.</h2>
+<h2 id="-strategic-implications-what-should-banks-do">🏦 Strategic Implications: What Should Banks Do?</h2>
+<p>Each type of institution faces unique challenges:</p>
+<ul>
+<li><strong>Retail Banks:</strong> Embrace AI-powered personalisation and embedded services, but retain a human touch.</li>
+<li><strong>Investment Banks:</strong> Lead in AI/quantum adoption to gain speed and precision in trading.</li>
+<li><strong>Central Banks:</strong> Shape CBDCs, set tech standards, and build systemic quantum resilience.</li>
+<li><strong>Fintechs:</strong> Innovate in customer experience, partner with incumbents, and prove regulatory maturity.</li>
+</ul>
+<hr>
+<h2 id="-bottom-line">🚀 Bottom Line</h2>
+<p>The next five years will separate <strong>those who merely adopted tech</strong> from those who <strong>lead with it</strong>. The winners will blend:
+✅ Advanced tech (AI, blockchain, quantum)<br>
+✅ Robust governance and security<br>
+✅ Customer-first innovation<br>
+✅ Open, collaborative mindsets</p>
+<p>In a world where <strong>tech is finance</strong>, curiosity, agility, and accountability will define the next generation of banking leaders.</p>
+<h2 id="are-you-ready-for-whats-beyond-the-peak">Are you ready for what’s beyond the peak?</h2>
+<h2 id="-lets-start-a-conversationwhich-of-these-trends-do-you-think-will-most-impact-your-institutionfutureofbanking-ai-quantumcomputing-cbdc-embeddedfinance-openbanking-fintech-cybersecurity-techtrends-financialinnovation">💬 <em>Let’s start a conversation:</em><br>
+Which of these trends do you think will most impact your institution?<br>
+#FutureOfBanking #AI #QuantumComputing #CBDC #EmbeddedFinance #OpenBanking #Fintech #CyberSecurity #TechTrends #FinancialInnovation</h2>
+<h3 id="-references">📚 References</h3>
+<ol>
+<li>
+<p><strong>Gartner Hype Cycle 2024</strong><br>
+<em>Generative AI is Sliding Into the Trough of Disillusionment</em><br>
+<a href="https://www.infodocket.com/2024/08/22/generative-ai-is-sliding-into-the-trough-of-disillusionment-according-to-2024-gartner-hype-cycle-report/">Infodocket.com – Aug 2024</a></p>
+</li>
+<li>
+<p><strong>Morgan Stanley</strong><br>
+<em>AI Trends: Reasoning, Agentic Models &#x26; Custom Silicon</em><br>
+<a href="https://www.morganstanley.com/insights/articles/ai-trends-reasoning-frontier-models-2025-tmt">MorganStanley.com – 2025</a></p>
+</li>
+<li>
+<p><strong>Deloitte</strong><br>
+<em>2025 Banking Industry Outlook – Generative AI, Quantum, Trust and Risk</em><br>
+<a href="https://www2.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html">Deloitte.com</a></p>
+</li>
+<li>
+<p><strong>Deloitte – Tech Trends 2025</strong><br>
+<em>Post-Quantum Cryptography &#x26; Cybersecurity Challenges</em><br>
+<a href="https://www2.deloitte.com/us/en/insights/focus/tech-trends/2025/future-of-cybersecurity-and-cryptography-with-quantropi.html">Deloitte.com</a></p>
+</li>
+<li>
+<p><strong>Reuters – BIS Survey on CBDCs</strong><br>
+<em>Twenty-Four Central Banks to Launch Digital Currencies by 2030</em><br>
+<a href="https://www.reuters.com/markets/currencies/twenty-four-central-banks-will-have-digital-currencies-by-2030-bis-survey-2023-07-10/">Reuters.com – Jul 2023</a></p>
+</li>
+<li>
+<p><strong>World Economic Forum</strong><br>
+<em>Embedded Finance: Disruptive Force and $7 Trillion Market Potential</em><br>
+<a href="https://www.weforum.org/stories/2025/04/embedded-finance-disruptive-force-financial-institutions/">WEF.org – 2025</a></p>
+</li>
+<li>
+<p><strong>FirstBank</strong><br>
+<em>Top Banking Trends to Watch in 2025 – Tokenisation &#x26; Blockchain</em><br>
+<a href="https://www.firstbank.com/resources/learning-center/top-banking-trends-to-watch-in-2025/">FirstBank.com</a></p>
+</li>
+<li>
+<p><strong>UXDA</strong><br>
+<em>5 Ways Future Money Will Disrupt Banking (Metaverse &#x26; Spatial Computing)</em><br>
+<a href="https://theuxda.com/blog/5-ways-future-money-will-disrupt-banking-experience">UXDA.com – 2025</a></p>
+</li>
+<li>
+<p><strong>Gartner</strong><br>
+<em>Top Strategic Tech Trends for 2025 – Disinformation Security</em><br>
+<a href="https://www.gartner.com/en/articles/top-technology-trends-2025">Gartner.com</a></p>
+</li>
+<li>
+<p><strong>World Economic Forum (CBDC Security)</strong><br>
+<em>Safeguarding Central Bank Digital Currency Systems in the Post-Quantum Age</em><br>
+<a href="https://www.weforum.org/stories/2024/05/safeguarding-central-bank-digital-currency-systems-post-quantum-age/">WEF.org – May 2024</a></p>
+</li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

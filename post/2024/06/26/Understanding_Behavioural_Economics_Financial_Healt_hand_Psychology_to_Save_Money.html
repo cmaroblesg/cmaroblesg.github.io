@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Understanding Behavioural Economics, Financial Health, and Psychology to Save Money — an article by César Robles."><title>Understanding Behavioural Economics, Financial Health, and Psychology to Save Money | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-06-26">26 June 2024</time><span>Post</span></div><h1>Understanding Behavioural Economics, Financial Health, and Psychology to Save Money</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>In today’s fast-paced world, managing your finances effectively is more important than ever. Have you ever wondered why you make certain financial decisions, or why saving money can sometimes feel like a monumental task? This article delves into the fascinating world of behavioural economics, financial health, and the psychology behind our financial choices. By understanding these concepts, you can develop smarter strategies to save money and achieve financial stability. Read on to discover practical tips and real-life examples that can help transform your financial habits.</p>
+<p><img src="/imag/post_images/saving_money.jpg" alt="Saving money - DALL-E 3.0"></p>
+<h2 id="behavioural-economics">Behavioural Economics</h2>
+<p>Behavioural economics examines how psychological factors influence economic decisions. Unlike traditional economics, which assumes rational decision-making, behavioural economics acknowledges that people often act irrationally due to biases and heuristics. Key concepts include:</p>
+<ul>
+<li><strong>Anchoring</strong>: Relying too heavily on the first piece of information encountered.</li>
+<li><strong>Loss Aversion</strong>: Preferring to avoid losses rather than acquiring equivalent gains.</li>
+<li><strong>Hyperbolic Discounting</strong>: Valuing immediate rewards more highly than future ones.</li>
+</ul>
+<p>By understanding these biases, individuals can create strategies to counteract them, such as setting automatic savings or using budgeting tools to maintain discipline.</p>
+<h2 id="financial-health">Financial Health</h2>
+<p>Financial health refers to the overall state of an individual’s financial situation, encompassing aspects like income, expenses, savings, and debt. To achieve good financial health, consider the following steps:</p>
+<ol>
+<li><strong>Budgeting</strong>: Track income and expenses to ensure you live within your means.</li>
+<li><strong>Emergency Fund</strong>: Save at least 3-6 months’ worth of expenses for unforeseen circumstances.</li>
+<li><strong>Debt Management</strong>: Prioritise paying off high-interest debts first.</li>
+<li><strong>Investing</strong>: Grow your wealth through informed investments.</li>
+</ol>
+<p>Regularly reviewing and adjusting your financial plan can help maintain and improve your financial health.</p>
+<h2 id="psychology-behind-finances">Psychology Behind Finances</h2>
+<p>Psychology plays a significant role in financial decision-making. Understanding the psychological aspects can help individuals make better financial choices. Key elements include:</p>
+<ul>
+<li><strong>Emotional Spending</strong>: Spending money in response to emotions rather than needs or plans. Strategies to combat this include mindful spending and delaying purchases.</li>
+<li><strong>Social Influence</strong>: Financial decisions can be heavily influenced by peers and social norms. Awareness of this can help individuals make more independent and rational choices.</li>
+<li><strong>Goal Setting</strong>: Clear, achievable financial goals can motivate disciplined saving and spending habits. Visualising long-term benefits can help overcome the temptation for immediate gratification.</li>
+</ul>
+<h2 id="practical-tips-to-save-money">Practical Tips to Save Money</h2>
+<ol>
+<li><strong>Automate Savings</strong>: Set up automatic transfers to savings accounts to ensure consistent saving.</li>
+<li><strong>Use Budgeting Apps</strong>: Tools like Mint or YNAB can help track expenses and identify areas to cut back.</li>
+<li><strong>Practice Mindful Spending</strong>: Reflect on whether a purchase is a need or a want before committing.</li>
+<li><strong>Avoid High-Interest Debt</strong>: Pay off credit cards and other high-interest debts quickly to avoid accumulating interest.</li>
+<li><strong>Invest in Knowledge</strong>: Educate yourself about personal finance through books, courses, and reputable websites.</li>
+</ol>
+<p>By integrating insights from behavioural economics, maintaining good financial health, and applying psychological principles, individuals can develop effective strategies to save money and achieve their financial goals.</p>
+<h2 id="real-life-example">Real-Life Example</h2>
+<p><strong>Meet Sarah: A Journey to Financial Wellness</strong></p>
+<p>Sarah is a 30-year-old professional who struggled with impulsive spending and accumulating debt. She decided to turn her financial life around using principles from behavioural economics, financial health, and financial psychology.</p>
+<ol>
+<li>
+<p><strong>Behavioural Economics</strong>: Sarah realised she was falling victim to <strong>hyperbolic discounting</strong>, often prioritising immediate pleasures over long-term savings. To combat this, she set up automatic transfers to her savings account every payday. This reduced her temptation to spend impulsively.</p>
+</li>
+<li>
+<p><strong>Financial Health</strong>: She started by <strong>budgeting</strong> her monthly income, tracking her expenses meticulously. Sarah built an <strong>emergency fund</strong> covering six months of expenses, giving her peace of mind and financial security. She also tackled her <strong>debt</strong> by focusing on paying off high-interest credit card balances first. With a clear plan, she began to <strong>invest</strong> a portion of her income in low-risk mutual funds.</p>
+</li>
+<li>
+<p><strong>Financial Psychology</strong>: Understanding her habit of <strong>emotional spending</strong>, Sarah practiced mindful spending by waiting 24 hours before making any non-essential purchases. She also recognised the <strong>social influence</strong> of friends who often encouraged her to splurge. By setting clear <strong>financial goals</strong>, such as saving for a down payment on a house, she stayed motivated and focused.</p>
+</li>
+</ol>
+<h2 id="outcome">Outcome:</h2>
+<p>After a year, Sarah’s financial situation improved significantly. Her disciplined approach led to substantial savings, reduced debt, and a healthier financial outlook. By applying these concepts, Sarah achieved a balanced and secure financial life.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.behavioraleconomics.com/resources/mini-encyclopedia-of-be/">Behavioural Economics Guide</a></li>
+<li><a href="https://finhealthnetwork.org/">Financial Health Network</a></li>
+<li><a href="https://www.psychologytoday.com/us/basics/money/psychology-money">Psychology Today - Financial Psychology</a></li>
+<li><a href="https://www.investopedia.com/terms/b/behavioral_economics.asp">Investopedia - Behavioural Economics</a></li>
+<li><a href="https://www.mint.com/">Mint - Budgeting Tools</a></li>
+<li><a href="https://www.youneedabudget.com/">YNAB - You Need A Budget</a></li>
+<li><a href="https://www.nerdwallet.com/article/finance/how-to-build-an-emergency-fund">NerdWallet - How to Build an Emergency Fund</a></li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

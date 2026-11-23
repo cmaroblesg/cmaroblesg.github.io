@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="📚 LLMs, Ambiguity, and Business Impact — an article by César Robles."><title>📚 LLMs, Ambiguity, and Business Impact | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2025-05-17">17 May 2025</time><span>Post</span></div><h1>📚 LLMs, Ambiguity, and Business Impact</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>Ambiguity is the silent enemy of AI accuracy. If your prompts are unclear, your Large Language Model might sound smart—but be wildly wrong. This post explores how ambiguity impacts behaviour, how you can fix it, and how businesses are turning clarity into profit and trust.</p>
+<p><img src="/imag/post_images/llm_ambiguity.jpg" alt="LLM Abiguity"></p>
+<h2 id="1-how-ambiguity-affects-llm-behaviour-and-accuracy">1. How Ambiguity Affects LLM Behaviour and Accuracy</h2>
+<p>Large Language Models (LLMs) like GPT-4 are probabilistic models trained to predict the next word in a sequence based on vast text corpora. Ambiguity introduces uncertainty in interpretation, which impacts both behaviour and accuracy in the following ways:</p>
+<h3 id="-behavioural-impact">🔄 Behavioural Impact:</h3>
+<ul>
+<li>Multiple plausible completions: When questions are ambiguous, LLMs may offer several possible answers depending on how the ambiguity is interpreted.</li>
+<li>Hedging or generalising: To cover multiple interpretations, LLMs may use vague or overly general responses, reducing their usefulness.</li>
+<li>Hallucination risk increases: The model might infer incorrect or non-existent facts based on a misread context.</li>
+</ul>
+<h3 id="-accuracy-impact">🎯 Accuracy Impact:</h3>
+<ul>
+<li>Reduced precision: Ambiguous prompts often lead to less factual and more speculative answers.</li>
+<li>Context drift: The LLM may follow a plausible but incorrect interpretation, reducing alignment with user intent.
+*Difficulty in evaluation: Scoring responses becomes harder when ambiguity clouds the “correct” answer.</li>
+</ul>
+<h3 id="-example">📌 Example:</h3>
+<p>Prompt: “Tell me about Apple.”</p>
+<ul>
+<li>Is it about the tech company, the fruit, or stock investment?</li>
+<li>An LLM may guess wrong if no context is provided, which demonstrates the criticality of ambiguity in prompt crafting.</li>
+</ul>
+<p>⸻</p>
+<h2 id="2-how-to-mitigate-ambiguity-in-llm-use">2. How to Mitigate Ambiguity in LLM Use</h2>
+<h3 id="-prompt-engineering">✅ Prompt Engineering:</h3>
+<ul>
+<li>Explicit context: Frame your question with specifics. e.g., “Tell me about Apple Inc.’s stock performance in Q1 2024.”</li>
+<li>Constraints and structure: Add expected formats or limits, e.g., “List 3 features of the iPhone 15.”</li>
+<li>Clarifying questions: Design the system to respond with clarifications before answering if ambiguity is detected.</li>
+</ul>
+<h3 id="️-fine-tuning-and-retrieval-augmented-generation-rag">🛠️ Fine-Tuning and Retrieval-Augmented Generation (RAG):</h3>
+<ul>
+<li>Fine-tuning the model on domain-specific language and expected inputs improves its understanding of ambiguous terms in that context.</li>
+<li>RAG systems add precision by grounding the answer in a document corpus, reducing ambiguity by providing the model with more in-context evidence.</li>
+</ul>
+<h3 id="-user-feedback-loops">🧠 User Feedback Loops:</h3>
+<ul>
+<li>Implementing thumbs-up/down or comment systems can help tune models to real-world expectations.</li>
+<li>Data from ambiguous responses can be flagged and used to retrain or fine-tune behaviour.</li>
+</ul>
+<p>⸻</p>
+<h2 id="3-how-clear-answers-increase-business-value">3. How Clear Answers Increase Business Value</h2>
+<h3 id="-perception-of-intelligence-and-trust">💡 Perception of Intelligence and Trust:</h3>
+<ul>
+<li>Users equate clarity with competence. An LLM that gives relevant, precise answers is seen as smarter and more reliable.</li>
+<li>Reducing ambiguity increases user trust, which is crucial for business adoption in customer support, finance, or healthcare.</li>
+</ul>
+<h3 id="-conversion-and-retention">📈 Conversion and Retention:</h3>
+<ul>
+<li>Clear and context-aware answers in customer interactions lead to higher conversion rates (e.g., sales chatbots, onboarding flows).</li>
+<li>Lower cognitive load improves satisfaction and boosts NPS (Net Promoter Score).</li>
+</ul>
+<h3 id="-integration-with-business-kpis">🧩 Integration with Business KPIs:</h3>
+<ul>
+<li>Precision enables deeper integration into business logic (e.g., summarising contracts, explaining risk, or financial forecasting).</li>
+<li>The better the LLM performs in ambiguous contexts, the more roles it can take in decision support, customer experience, and automation.</li>
+</ul>
+<p>⸻</p>
+<h2 id="-real-world-examples">🔬 Real-World Examples</h2>
+<ul>
+<li><em>Klarna:</em> Uses LLMs for customer support. Reduced ambiguity through prompt tuning led to 2x improvement in first-response accuracy.</li>
+<li><em>Morgan Stanley:</em> Implemented GPT with RAG over internal documents. Clearer financial answers improved analyst productivity by over 30%.</li>
+<li><em>Duolingo:</em> Uses GPT-4 to tutor language learners. Prompt design was iterated to ensure that clarifications are included in ambiguous user messages.</li>
+</ul>
+<p>⸻</p>
+<h2 id="-conclusion">📌 Conclusion</h2>
+<p>Ambiguity is a core challenge for LLM adoption in business settings. Understanding and mitigating it via prompt engineering, system design, and user interaction strategies greatly improves accuracy, reliability, and perceived intelligence. These, in turn, lead to greater business impact through better customer experience, higher automation potential, and stronger decision-making support.</p></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

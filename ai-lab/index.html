@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Explore AI prompts, creative experiments and prompt engineering by César Robles."><title>AI Lab | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.prompts-section[data-astro-cid-hb2ip6tz]{padding-top:20px;padding-bottom:100px}.prompts-grid[data-astro-cid-hb2ip6tz]{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;display:grid}.prompt-card[data-astro-cid-hb2ip6tz]{border:1px solid var(--theme-border);background:var(--theme-surface);min-height:240px;color:var(--ai-card-text);border-radius:14px;flex-direction:column;gap:18px;padding:28px;text-decoration:none;transition:transform .18s,border-color .18s;display:flex}.prompt-card[data-astro-cid-hb2ip6tz]:hover{border-color:var(--theme-link);transform:translateY(-4px)}.prompt-card[data-astro-cid-hb2ip6tz]:focus-visible{outline:3px solid var(--theme-link);outline-offset:3px}.prompt-category[data-astro-cid-hb2ip6tz]{color:var(--ai-card-highlight);letter-spacing:.1em;text-transform:uppercase;font-size:.75rem}.prompt-card[data-astro-cid-hb2ip6tz] h2[data-astro-cid-hb2ip6tz]{overflow-wrap:anywhere;margin:0;font-size:1.25rem;line-height:1.4}.prompt-card[data-astro-cid-hb2ip6tz] time[data-astro-cid-hb2ip6tz]{color:var(--ai-card-date);font-size:.85rem}.prompt-link[data-astro-cid-hb2ip6tz]{color:var(--ai-card-highlight);margin-top:auto;font-size:.9rem}@media (width<=900px){.prompts-grid[data-astro-cid-hb2ip6tz]{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=600px){.prompts-grid[data-astro-cid-hb2ip6tz]{grid-template-columns:1fr}}@media (prefers-reduced-motion:reduce){.prompt-card[data-astro-cid-hb2ip6tz]{transition:none}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/" aria-current="page">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/" aria-current="page">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><section class="hero container" data-astro-cid-hb2ip6tz><p class="eyebrow" data-astro-cid-hb2ip6tz>AI Lab</p><h1 data-astro-cid-hb2ip6tz>Exploring the possibilities of AI.</h1><p class="lead" data-astro-cid-hb2ip6tz>A collection of 13 prompts exploring generative AI, creative workflows and intelligent assistants.</p></section><section class="container prompts-section" aria-label="AI prompt collection" data-astro-cid-hb2ip6tz><div class="prompts-grid" data-astro-cid-hb2ip6tz><a class="prompt-card" href="/ai-lab/2024-08-23-NSFW_Content_Analyzer/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>NSFW Content Analyzer</h2><time datetime="2024-08-23" data-astro-cid-hb2ip6tz>23 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-20-Visual_Prompt_Generator/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Visual Prompt Generator</h2><time datetime="2024-08-20" data-astro-cid-hb2ip6tz>20 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-11-Visual_Elucidator_AI/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Visual Elucidator AI</h2><time datetime="2024-08-11" data-astro-cid-hb2ip6tz>11 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-08-Coursera_Assistant/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Coursera Assistant</h2><time datetime="2024-08-08" data-astro-cid-hb2ip6tz>8 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-08-Digital_Layer/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Digital Layer</h2><time datetime="2024-08-08" data-astro-cid-hb2ip6tz>8 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-08-Power_MBA_Student/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Power MBA Student</h2><time datetime="2024-08-08" data-astro-cid-hb2ip6tz>8 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-08-08-The_Camp_Assistant/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>The Camp Assistant</h2><time datetime="2024-08-08" data-astro-cid-hb2ip6tz>8 August 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-25-Content_Generator/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Content Generator</h2><time datetime="2024-07-25" data-astro-cid-hb2ip6tz>25 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-25-Digital_Art_Maestro/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Digital Art Maestro</h2><time datetime="2024-07-25" data-astro-cid-hb2ip6tz>25 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-25-Mastering_Digital_Image_Prompts_v2/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Mastering Digital Image Prompts v2</h2><time datetime="2024-07-25" data-astro-cid-hb2ip6tz>25 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-23-Mastering_Digital_Image_Prompts/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Mastering Digital Image Prompts</h2><time datetime="2024-07-23" data-astro-cid-hb2ip6tz>23 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-22-Digital_Art_and_Image_Expert/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Digital Art and Image Expert</h2><time datetime="2024-07-22" data-astro-cid-hb2ip6tz>22 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a><a class="prompt-card" href="/ai-lab/2024-07-21-Masterpieces_Unveiled/" data-astro-cid-hb2ip6tz><span class="prompt-category" data-astro-cid-hb2ip6tz>Prompt Engineering</span><h2 data-astro-cid-hb2ip6tz>Masterpieces Unveiled</h2><time datetime="2024-07-21" data-astro-cid-hb2ip6tz>21 July 2024</time><span class="prompt-link" data-astro-cid-hb2ip6tz>Explore prompt →</span></a></div></section></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

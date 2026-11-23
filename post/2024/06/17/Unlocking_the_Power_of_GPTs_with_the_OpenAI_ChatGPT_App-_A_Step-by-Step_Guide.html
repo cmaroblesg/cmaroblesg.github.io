@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Unlocking the Power of GPTs with the OpenAI ChatGPT App: A Step-by-Step Guide 🚀 — an article by César Robles."><title>Unlocking the Power of GPTs with the OpenAI ChatGPT App: A Step-by-Step Guide 🚀 | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-06-17">17 June 2024</time><span>Post</span></div><h1>Unlocking the Power of GPTs with the OpenAI ChatGPT App: A Step-by-Step Guide 🚀</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p><img src="/imag/post_images/Chatbots.jpg" alt="Chatbots - Power by DALL-E 3.0"></p>
+<p>Have you ever wondered how to create your own Generative Pre-trained Transformers (GPTs) using the OpenAI ChatGPT app? It’s easier than you might think! Here’s a comprehensive guide to help you harness the power of OpenAI’s GPT technology, complete with examples to get you started.</p>
+<h2 id="what-is-a-gpt">What is a GPT?</h2>
+<p>Generative Pre-trained Transformers (GPTs) are advanced AI models that can generate human-like text based on the input they receive. These models are pre-trained on a vast amount of data, enabling them to understand and generate natural language with remarkable accuracy.</p>
+<h2 id="how-to-generate-gpts-with-the-openai-chatgpt-app">How to Generate GPTs with the OpenAI ChatGPT App</h2>
+<ol>
+<li>
+<p><strong>Download the ChatGPT App</strong>
+First, download the ChatGPT app from the <a href="https://apps.apple.com/us/app/chatgpt/id6448311069">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.openai.chatgpt">Google Play Store</a>.</p>
+</li>
+<li>
+<p><strong>Sign In or Create an Account</strong>
+Open the app and sign in with your OpenAI account. If you don’t have an account yet, you can create one directly in the app.</p>
+</li>
+<li>
+<p><strong>Access the GPT Functionality</strong>
+Once you’re logged in, you can start a new chat and begin generating text using GPT-4. Simply type your prompt into the chat interface and send it.</p>
+</li>
+<li>
+<p><strong>Generate Text with GPT</strong>
+Here’s an example of how to use GPT-4 to generate a paragraph:</p>
+<ul>
+<li><strong>Prompt</strong>: “Write a short story about a futuristic world where AI is part of everyday life.”</li>
+<li><strong>Response</strong>: The AI will generate a story based on your prompt, providing a coherent and engaging narrative.</li>
+</ul>
+</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<ol>
+<li>
+<p><strong>Creating Marketing Copy</strong></p>
+<ul>
+<li><strong>Prompt</strong>: “Write a catchy headline for a new eco-friendly water bottle.”</li>
+<li><strong>Response</strong>: The AI will generate a headline such as “Stay Hydrated, Stay Green: Discover Our Eco-Friendly Water Bottle!”</li>
+</ul>
+</li>
+<li>
+<p><strong>Generating Code Snippets</strong></p>
+<ul>
+<li><strong>Prompt</strong>: “Write a Python function that reverses a string.”</li>
+<li><strong>Response</strong>: The AI will provide a Python code snippet:
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> reverse_string</span><span style="color:#E1E4E8">(s):</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> s[::</span><span style="color:#F97583">-</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">]</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Drafting Emails</strong></p>
+<ul>
+<li><strong>Prompt</strong>: “Draft a professional email to a potential client introducing our new AI-powered tool.”</li>
+<li><strong>Response</strong>: The AI will generate an email draft:
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Dear [Client Name],</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>I hope this message finds you well. I am excited to introduce our latest AI-powered tool designed to streamline your workflow and enhance productivity. This innovative solution offers advanced features that can significantly improve your operational efficiency.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>I would love to schedule a meeting to discuss how our tool can benefit your business.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Best regards,</span></span>
+<span class="line"><span>[Your Name]</span></span></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="tips-for-effective-gpt-usage">Tips for Effective GPT Usage</h2>
+<ul>
+<li><strong>Be Specific with Prompts</strong>: The more detailed your prompt, the better the output. Clearly define the context and requirements.</li>
+<li><strong>Experiment with Prompts</strong>: Try different prompts to see how the AI responds and find the best approach for your needs.</li>
+<li><strong>Iterate and Refine</strong>: Don’t hesitate to refine your prompts based on the outputs you receive. Iteration is key to getting the best results.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Creating your own GPTs with the OpenAI ChatGPT app opens up a world of possibilities, from generating creative content to automating mundane tasks. By following these steps and experimenting with different prompts, you can harness the full potential of GPT technology to enhance your projects and workflows.</p>
+<p>Start exploring today and see how GPTs can transform your work!</p>
+<p>#GPT #OpenAI #ChatGPTApp #AI #Technology #Innovation #MachineLearning #Productivity</p></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

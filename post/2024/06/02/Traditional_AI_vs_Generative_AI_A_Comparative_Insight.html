@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Traditional AI vs. Generative AI: A Comparative Insight — an article by César Robles."><title>Traditional AI vs. Generative AI: A Comparative Insight | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-06-02">2 June 2024</time><span>Post</span></div><h1>Traditional AI vs. Generative AI: A Comparative Insight</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>In recent years, the evolution of Artificial Intelligence (AI) has branched into various specialised fields, with Traditional AI and Generative AI being two of the most significant. Understanding the differences between these two can shed light on their respective applications and potential in various sectors.</p>
+<h2 id="what-is-traditional-ai">What is Traditional AI?</h2>
+<p>Traditional AI, often referred to as Narrow AI or Weak AI, is designed to perform specific tasks and solve predefined problems. These systems are highly specialised and operate within a limited scope. Some of the key characteristics and applications of Traditional AI include:</p>
+<ul>
+<li><strong>Rule-Based Systems</strong>: Traditional AI relies on predefined rules and logic to process information and make decisions. These systems excel in environments where the parameters are well-defined.</li>
+<li><strong>Machine Learning (ML)</strong>: Traditional AI includes ML models that learn from historical data to make predictions or classifications. These models require extensive training data and are highly effective in tasks such as image recognition, language translation, and recommendation systems.</li>
+<li><strong>Expert Systems</strong>: These are AI programs that mimic the decision-making abilities of a human expert. They are commonly used in medical diagnosis, financial analysis, and customer support.</li>
+</ul>
+<h2 id="what-is-generative-ai">What is Generative AI?</h2>
+<p><strong>Generative AI</strong>, a more recent advancement, involves models that can create new content by learning patterns from existing data. These models are not just limited to identifying patterns but can generate novel outputs. Key features and applications of Generative AI include:</p>
+<ul>
+<li><strong>Content Creation</strong>: Generative AI can produce text, images, music, and even video content. For instance, models like GPT-4 can generate human-like text, making them useful in creative industries, automated content generation, and chatbots.</li>
+<li><strong>Data Augmentation</strong>: In fields like healthcare and finance, Generative AI can create synthetic data to augment real datasets, helping to improve the training of other AI models while maintaining privacy.</li>
+<li><strong>Innovation and Design</strong>: Generative models can assist in designing new products, such as pharmaceuticals, materials, and consumer goods, by simulating and generating novel combinations and solutions.</li>
+</ul>
+<h2 id="key-differences">Key Differences</h2>
+<ol>
+<li>
+<p><strong>Scope and Flexibility</strong>:</p>
+<ul>
+<li>Traditional AI is task-specific and operates within a limited scope defined by its training data and rules.</li>
+<li>Generative AI is more flexible, capable of creating new and diverse outputs that extend beyond its initial training data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Learning and Adaptation</strong>:</p>
+<ul>
+<li>Traditional AI models learn from historical data to make future predictions or decisions but are constrained by their training scope.</li>
+<li>Generative AI models learn patterns and structures from the data and can generate new, unseen data, exhibiting a higher level of creativity and adaptability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Applications</strong>:</p>
+<ul>
+<li>Traditional AI is widely used in automation, predictive analytics, and operational efficiency improvements.</li>
+<li>Generative AI is leveraged for creative content generation, data augmentation, and innovative design solutions.</li>
+</ul>
+</li>
+</ol>
+<h2 id="real-world-applications">Real-World Applications</h2>
+<ul>
+<li><strong>Healthcare</strong>: Traditional AI is used for diagnostic tools and patient monitoring, while Generative AI can create synthetic patient data for training purposes and drug discovery.</li>
+<li><strong>Finance</strong>: Traditional AI models are essential for fraud detection and algorithmic trading, whereas Generative AI can simulate market scenarios and generate financial reports.</li>
+<li><strong>Entertainment</strong>: Traditional AI powers recommendation engines on streaming platforms, while Generative AI creates new music, scripts, and digital art.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Both Traditional AI and Generative AI have unique strengths and are revolutionising various industries in different ways. Traditional AI’s precision and reliability in specific tasks complement Generative AI’s creativity and innovation, making them both indispensable in the modern technological landscape.</p>
+<p>Stay tuned for more insights as we continue to explore the evolving world of AI and its transformative impact on our lives and industries.</p>
+<hr>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.ibm.com/cloud/learn/what-is-artificial-intelligence">“Understanding Artificial Intelligence (AI)”</a> - IBM</li>
+<li><a href="https://www.springboard.com/blog/ai-machine-learning/generative-ai/">“Generative AI: What it is, Tools, Models, Applications and Use Cases”</a> - Springboard</li>
+<li><a href="https://www.forbes.com/sites/forbestechcouncil/2022/01/31/traditional-ai-vs-generative-ai-whats-the-difference/">“Traditional AI vs. Generative AI”</a> - Forbes</li>
+<li><a href="https://www2.deloitte.com/us/en/insights/industry/financial-services/artificial-intelligence-in-banking.html">“Applications of Artificial Intelligence in Industry”</a> - Deloitte</li>
+<li><a href="https://www.accenture.com/us-en/insights/artificial-intelligence">“The Future of Artificial Intelligence in Business”</a> - Accenture</li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

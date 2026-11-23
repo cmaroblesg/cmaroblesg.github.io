@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="The Future of Business with the Arrival of Large Language Models (LLMs) — an article by César Robles."><title>The Future of Business with the Arrival of Large Language Models (LLMs) | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-07-22">22 July 2024</time><span>Post</span></div><h1>The Future of Business with the Arrival of Large Language Models (LLMs)</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>The advent of Large Language Models (LLMs) is poised to revolutionise the business landscape, offering unprecedented opportunities and challenges.</p>
+<p><img src="/imag/post_images/future_business_ai.jpg" alt="The Future of Business with the Arrival of Large Language Models (LLMs)"></p>
+<p>Here’s how LLMs are shaping the future of business:</p>
+<h2 id="enhancing-customer-service">Enhancing Customer Service</h2>
+<p>LLMs can provide instant, accurate responses to customer inquiries, significantly improving customer service experiences. By understanding natural language, these models can handle complex queries, personalise interactions, and provide 24/7 support.</p>
+<p><strong>Example:</strong>
+Companies like OpenAI’s ChatGPT are being integrated into customer service platforms to offer real-time assistance and reduce wait times, enhancing overall customer satisfaction.</p>
+<h2 id="streamlining-operations">Streamlining Operations</h2>
+<p>LLMs can automate a wide range of business processes, from drafting emails to generating reports. This not only saves time but also ensures consistency and accuracy in communications and documentation.</p>
+<p><strong>Example:</strong>
+Organisations are using LLMs to automate routine tasks such as scheduling meetings, managing calendars, and even creating detailed business proposals, thereby freeing up human resources for more strategic activities.</p>
+<h2 id="driving-innovation">Driving Innovation</h2>
+<p>LLMs can analyse vast datasets to identify trends and insights, driving innovation and strategic decision-making. Businesses can leverage these insights to develop new products, enter new markets, and improve existing services.</p>
+<p><strong>Example:</strong>
+In the retail sector, companies use LLMs to analyse consumer behaviour and preferences, enabling them to tailor their product offerings and marketing strategies more effectively.</p>
+<h2 id="enhancing-marketing-strategies">Enhancing Marketing Strategies</h2>
+<p>With the ability to generate high-quality content, LLMs are transforming marketing. They can create engaging blog posts, social media content, and even personalised marketing emails, enhancing brand communication and engagement.</p>
+<p><strong>Example:</strong>
+Marketing teams are using LLMs to generate targeted content for different customer segments, improving the effectiveness of their campaigns and reaching wider audiences.</p>
+<h2 id="supporting-decision-making">Supporting Decision Making</h2>
+<p>LLMs can process and summarise large volumes of information, providing executives with concise and relevant insights to inform their decision-making processes. This can lead to more informed and timely business decisions.</p>
+<p><strong>Example:</strong>
+Financial institutions use LLMs to analyse market trends and generate investment strategies, helping managers make data-driven decisions that enhance profitability.</p>
+<h2 id="training-and-development">Training and Development</h2>
+<p>LLMs can be used to develop sophisticated training programs, providing employees with personalised learning experiences. This can improve skill development and employee performance.</p>
+<p><strong>Example:</strong>
+HR departments are integrating LLMs into their training platforms to create interactive and adaptive learning modules, ensuring employees receive the most relevant and effective training.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The integration of Large Language Models into business operations promises to transform the way companies operate, innovate, and interact with customers. As these models continue to evolve, businesses that embrace LLMs will be well-positioned to lead in the competitive digital landscape.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://openai.com/">OpenAI - GPT-3 in Customer Service</a></li>
+<li><a href="https://www.forbes.com/sites/forbestechcouncil/2021/03/16/how-ai-is-transforming-business-operations/">Forbes - How AI is Transforming Business Operations</a></li>
+<li><a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-impact-of-ai-on-marketing">McKinsey - The Impact of AI on Marketing</a></li>
+<li><a href="https://hbr.org/2018/07/ai-and-decision-making">Harvard Business Review - AI and Decision Making</a></li>
+<li><a href="https://techcrunch.com/2021/08/05/ai-in-employee-training/">TechCrunch - AI in Employee Training</a></li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

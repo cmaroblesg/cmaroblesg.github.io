@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Building a Python Development Docker Container for AI and Data Science — an article by César Robles."><title>Building a Python Development Docker Container for AI and Data Science | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-06-26">26 June 2024</time><span>Containers</span></div><h1>Building a Python Development Docker Container for AI and Data Science</h1><p class="article-author">By César Robles</p><p class="article-tags">Docker</p></header><div class="article-content"><p>Creating a robust development environment is crucial for AI and data science projects. Here’s how you can build a Docker container with Python 3.12, essential libraries, Jupyter Lab, and Visual Studio Code.
+<img src="/imag/post_images/containers.jpg" alt="Containers - DALL-E 3.0"></p>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>Here’s the Dockerfile to set up the container:
+<a href="/documents/Dockerfiles/Dockerfile_Python3.12_JupyterLab_VSCode">Dockerfile</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="dockerfile"><code><span class="line"><span style="color:#6A737D"># Use an Ubuntu base image</span></span>
+<span class="line"><span style="color:#F97583">FROM</span><span style="color:#E1E4E8"> ubuntu:20.04</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Update packages and install dependencies</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> apt-get update &#x26;&#x26; apt-get install -y \</span></span>
+<span class="line"><span style="color:#E1E4E8">    software-properties-common \</span></span>
+<span class="line"><span style="color:#E1E4E8">    wget \</span></span>
+<span class="line"><span style="color:#E1E4E8">    curl \</span></span>
+<span class="line"><span style="color:#E1E4E8">    git \</span></span>
+<span class="line"><span style="color:#E1E4E8">    build-essential</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Add the Python 3.12 PPA and install Python 3.12</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> add-apt-repository ppa:deadsnakes/ppa &#x26;&#x26; \</span></span>
+<span class="line"><span style="color:#E1E4E8">    apt-get update &#x26;&#x26; \</span></span>
+<span class="line"><span style="color:#E1E4E8">    apt-get install -y python3.12 python3.12-venv python3.12-dev python3-pip</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Create a symbolic link so python points to python3.12</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> ln -s /usr/bin/python3.12 /usr/bin/python &#x26;&#x26; \</span></span>
+<span class="line"><span style="color:#E1E4E8">    ln -s /usr/bin/pip3 /usr/bin/pip</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Install required Python libraries</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> pip install --upgrade pip &#x26;&#x26; \</span></span>
+<span class="line"><span style="color:#E1E4E8">    pip install openai streamlit pandas numpy openpyxl jupyterlab</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Install Visual Studio Code Server</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> wget -qO- https://aka.ms/install-vscode-server/setup.sh | bash</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Expose ports</span></span>
+<span class="line"><span style="color:#F97583">EXPOSE</span><span style="color:#E1E4E8"> 8888</span></span>
+<span class="line"><span style="color:#F97583">EXPOSE</span><span style="color:#E1E4E8"> 8080</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Create a non-root user to work with</span></span>
+<span class="line"><span style="color:#F97583">RUN</span><span style="color:#E1E4E8"> useradd -ms /bin/bash devuser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Switch to the created user</span></span>
+<span class="line"><span style="color:#F97583">USER</span><span style="color:#E1E4E8"> devuser</span></span>
+<span class="line"><span style="color:#F97583">WORKDIR</span><span style="color:#E1E4E8"> /home/devuser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Command to start Jupyter Lab</span></span>
+<span class="line"><span style="color:#F97583">CMD</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">"jupyter"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"lab"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"--ip=0.0.0.0"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"--port=8888"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"--no-browser"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"--allow-root"</span><span style="color:#E1E4E8">]</span></span></code></pre>
+<h2 id="step-by-step-guide-to-building-the-container">Step-by-Step Guide to Building the Container</h2>
+<h3 id="1-create-the-dockerfile">1. Create the Dockerfile:</h3>
+<ul>
+<li>Open a terminal and create a new directory for your project:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> python_dev_container</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> python_dev_container</span></span></code></pre>
+<ul>
+<li>Create a file named Dockerfile:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">nano</span><span style="color:#9ECBFF"> Dockerfile</span></span></code></pre>
+<ul>
+<li>Copy and paste the Dockerfile content provided above into the Dockerfile and save the changes.</li>
+</ul>
+<h3 id="2-build-the-docker-image">2. Build the Docker Image:</h3>
+<ul>
+<li>Ensure you have Docker installed on your system. If not, you can install it following the instructions <a href="https://www.docker.com/products/docker-desktop">here</a>.</li>
+<li>In the directory where you created the Dockerfile, run the following command to build the image:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> build</span><span style="color:#79B8FF"> -t</span><span style="color:#9ECBFF"> python_dev:latest</span><span style="color:#9ECBFF"> .</span></span></code></pre>
+<h3 id="3-run-the-container">3. Run the Container:</h3>
+<ul>
+<li>Once the image is built, run the container using:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> run</span><span style="color:#79B8FF"> -it</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> 8888:8888</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> 8080:8080</span><span style="color:#9ECBFF"> python_dev:latest</span></span></code></pre>
+<ul>
+<li>This will start the container and expose ports 8888 for Jupyter Lab and 8080 for Visual Studio Code.</li>
+</ul>
+<h3 id="4-access-jupyter-lab-and-visual-studio-code">4. Access Jupyter Lab and Visual Studio Code:</h3>
+<p>Open your browser and go to <a href="http://localhost:8888">http://localhost:8888</a> to access Jupyter Lab.
+For Visual Studio Code, open your browser and go to <a href="http://localhost:8080">http://localhost:8080</a>.
+This container provides a complete development environment with Python 3.12, necessary libraries, Jupyter Lab, and Visual Studio Code, all ready to use.</p></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="What is Data Management and Why It’s Crucial for Business Culture — an article by César Robles."><title>What is Data Management and Why It’s Crucial for Business Culture | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-08-11">11 August 2024</time><span>Post</span></div><h1>What is Data Management and Why It’s Crucial for Business Culture</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p><strong>Data Management</strong> refers to the comprehensive process of collecting, storing, organising, and maintaining data within an organisation. It involves practices that ensure data is accurate, accessible, secure, and usable. This process is vital for transforming raw data into valuable insights that drive business decisions.</p>
+<p><img src="/imag/post_images/data_management.jpg" alt="Data Management"></p>
+<h2 id="why-data-management-is-important-for-business-culture">Why Data Management is Important for Business Culture:</h2>
+<ol>
+<li>
+<p><strong>Informed Decision-Making:</strong> Reliable data allows businesses to make strategic decisions based on facts rather than intuition, leading to improved outcomes and profitability.</p>
+</li>
+<li>
+<p><strong>Compliance and Security:</strong> Effective data management helps organisations comply with legal regulations and safeguard sensitive information. This builds trust with customers and stakeholders, reducing the risk of data breaches and legal issues.</p>
+</li>
+<li>
+<p><strong>Innovation and Growth:</strong> Access to quality data enables businesses to identify trends, innovate, and stay competitive. With well-managed data, companies can quickly adapt to market changes and capitalise on new opportunities.</p>
+</li>
+<li>
+<p><strong>Enhanced Collaboration:</strong> A strong data management culture promotes transparency and collaboration across different departments. When data is easily accessible and well-organised, teams can work more efficiently towards shared goals, leading to better overall performance.</p>
+</li>
+<li>
+<p><strong>Operational Efficiency:</strong> Properly managed data streamlines business processes by reducing redundancies and errors. This leads to more efficient operations, cost savings, and a better allocation of resources.</p>
+</li>
+</ol>
+<h2 id="the-9-services-of-data-management-according-to-dama-dama-management-dmbok">The 9 Services of Data Management According to DAMA (DAMA Management DMBOK):</h2>
+<ol>
+<li><strong>Data Governance:</strong> Establishing policies, procedures, and standards to ensure data quality and compliance.</li>
+<li><strong>Data Architecture:</strong> Designing and managing the structure and storage of data to support organisational needs.</li>
+<li><strong>Data Modelling and Design:</strong> Creating data models that represent the structure of the data used within the organisation.</li>
+<li><strong>Data Storage and Operations:</strong> Managing the physical storage of data and ensuring its accessibility.</li>
+<li><strong>Data Security:</strong> Protecting data from threats and ensuring its confidentiality, integrity, and availability.</li>
+<li><strong>Data Integration and Interoperability:</strong> Ensuring data can be easily shared and used across different systems and platforms.</li>
+<li><strong>Data Quality Management:</strong> Ensuring that data is accurate, consistent, and reliable.</li>
+<li><strong>Master and Reference Data Management:</strong> Managing key data sets that are critical for operations across the organisation.</li>
+<li><strong>Data Warehousing and Business Intelligence:</strong> Collecting, storing, and analysing data to support decision-making and reporting.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>In today’s data-driven world, data management is not just a technical necessity; it’s a foundational element of business culture. By embedding strong data management practices into the fabric of the organisation, businesses can ensure sustained growth, innovation, and resilience in an increasingly competitive landscape.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.datamanagement.com/importance">Importance of Data Management in Business</a></li>
+<li><a href="https://www.datagovernance.com/best-practices">Data Governance Best Practices</a></li>
+<li><a href="https://www.businessdata.com/role">The Role of Data in Business Success</a></li>
+<li><a href="https://www.techrepublic.com/effective-data-management-strategies">Effective Data Management Strategies</a></li>
+<li><a href="https://www.dama.org/content/body-knowledge">DAMA International - DMBOK Framework</a></li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

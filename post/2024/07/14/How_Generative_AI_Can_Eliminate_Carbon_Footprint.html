@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How Generative AI Can Eliminate Carbon Footprint — an article by César Robles."><title>How Generative AI Can Eliminate Carbon Footprint | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><style>.article{max-width:860px;padding-top:72px;padding-bottom:100px}.article-header{margin-bottom:52px}.back-link,.article-footer a{color:var(--article-link);font-size:.95rem}.article-meta{color:var(--article-meta);text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;gap:18px;margin-top:42px;font-size:.85rem;display:flex}.article-header h1{letter-spacing:-.045em;overflow-wrap:anywhere;margin:20px 0;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}.article-author,.article-tags{color:var(--article-secondary)}.article-content{color:var(--article-body);overflow-wrap:anywhere;font-size:1.05rem;line-height:1.85}.article-content h2,.article-content h3,.article-content h4{color:var(--article-heading);margin-top:2.2em;margin-bottom:.7em;line-height:1.35}.article-content p,.article-content ul,.article-content ol{margin:0 0 1.4em}.article-content li{margin-bottom:.45em}.article-content a{color:var(--article-link);text-underline-offset:.2em;text-decoration:underline}.article-content img{border-radius:12px;max-width:100%;height:auto;margin:2rem auto;display:block}.article-content blockquote{border-left:3px solid var(--article-quote-border);color:var(--article-quote-text);background:var(--theme-surface);margin:2rem 0;padding:.5rem 1.5rem}.article-content pre{background:var(--theme-surface);border-radius:12px;padding:1.25rem;overflow-x:auto}.article-content :not(pre)>code{background:var(--article-inline-code);border-radius:4px;padding:.15em .35em}.article-content hr{border:0;border-top:1px solid var(--theme-border);margin:2.5rem 0}.article-footer{border-top:1px solid var(--theme-border);margin-top:70px;padding-top:28px}@media (width<=760px){.article{padding-top:44px;padding-bottom:64px}.article-header{margin-bottom:36px}}
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><article class="article container"><header class="article-header"><a class="back-link" href="/writing/">← Back to Writing</a><div class="article-meta"><time datetime="2024-07-14">14 July 2024</time><span>Post</span></div><h1>How Generative AI Can Eliminate Carbon Footprint</h1><p class="article-author">By César Robles</p><p class="article-tags">LinkedIn Post</p></header><div class="article-content"><p>In the quest for a sustainable future, Generative AI (GenAI) is emerging as a powerful tool to reduce and eliminate carbon footprints. By leveraging advanced algorithms and machine learning, GenAI can optimise processes, innovate solutions, and drive efficiencies that significantly lower carbon emissions. Here’s a look at how Generative AI can contribute to a greener planet, complete with real-world examples.</p>
+<p><img src="/imag/post_images/genai_vs_carbon_foorprint.jpg" alt="AI Generative VS Carbon Footprint"></p>
+<h2 id="optimising-energy-consumption">Optimising Energy Consumption</h2>
+<p>One of the primary ways GenAI can help reduce carbon footprints is by optimising energy consumption. AI algorithms can analyse vast amounts of data to identify patterns and inefficiencies in energy usage, allowing for precise adjustments that conserve energy.</p>
+<p><strong>Example:</strong>
+Google has implemented AI to optimise the energy usage of its data centres. By using AI to predict and manage cooling systems more efficiently, Google has reduced the energy used for cooling by 40%, significantly cutting down its carbon footprint.</p>
+<h2 id="enhancing-renewable-energy-solutions">Enhancing Renewable Energy Solutions</h2>
+<p>Generative AI can improve the efficiency and deployment of renewable energy sources such as solar and wind power. By predicting weather patterns and optimising the alignment and maintenance of renewable energy infrastructure, AI can enhance the reliability and output of these green energy solutions.</p>
+<p><strong>Example:</strong>
+Xcel Energy, a utility company in the United States, uses AI to predict solar and wind power generation with high accuracy. This allows them to balance supply and demand more effectively, reducing reliance on fossil fuels and lowering overall carbon emissions.</p>
+<h2 id="smart-agriculture">Smart Agriculture</h2>
+<p>Agriculture is a significant contributor to greenhouse gas emissions. Generative AI can help create more sustainable agricultural practices by optimising resource use, reducing waste, and enhancing crop yields.</p>
+<p><strong>Example:</strong>
+Blue River Technology, a subsidiary of John Deere, uses AI-driven “see and spray” technology to apply herbicides only where needed. This precision reduces chemical usage by up to 90%, lowering the carbon footprint associated with agricultural production.</p>
+<h2 id="optimising-supply-chains">Optimising Supply Chains</h2>
+<p>Supply chains are a major source of carbon emissions due to transportation and logistics inefficiencies. Generative AI can optimise routes, reduce idle times, and improve inventory management to minimise the environmental impact.</p>
+<p><strong>Example:</strong>
+DHL, a global logistics company, employs AI to optimise its delivery routes and warehouse operations. This has led to a significant reduction in fuel consumption and carbon emissions, contributing to more sustainable logistics practices.</p>
+<h2 id="sustainable-manufacturing">Sustainable Manufacturing</h2>
+<p>Manufacturing processes can be energy-intensive and generate significant waste. Generative AI can design more efficient production processes, optimise the use of materials, and predict maintenance needs to prevent downtime and resource wastage.</p>
+<p><strong>Example:</strong>
+Siemens uses AI in its factories to predict equipment failures before they occur and to optimise production schedules. This not only improves efficiency but also reduces energy consumption and waste, contributing to a lower carbon footprint.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Generative AI offers a myriad of opportunities to reduce carbon footprints across various sectors. From optimising energy use and enhancing renewable energy solutions to making agriculture and manufacturing more sustainable, AI is paving the way for a greener future. By adopting these advanced technologies, we can significantly reduce our environmental impact and move towards a more sustainable world.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.blog.google/outreach-initiatives/environment/deepmind-ai-reduces-energy-used-for-datacenter-cooling/">Google’s AI for Data Center Efficiency</a></li>
+<li><a href="https://www.xcelenergy.com/renewable_energy">Xcel Energy’s AI for Renewable Energy Prediction</a></li>
+<li><a href="https://www.bluerivertechnology.com/">Blue River Technology’s AI in Agriculture</a></li>
+<li><a href="https://www.dhl.com/global-en/home/insights-and-innovation/insights/ai-in-logistics.html">DHL’s AI-Optimised Logistics</a></li>
+<li><a href="https://new.siemens.com/global/en/company/stories/research-technologies/ai-in-manufacturing.html">Siemens’ AI-Enhanced Manufacturing</a></li>
+</ol></div><footer class="article-footer"><a href="/writing/">← Explore more articles</a></footer></article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>

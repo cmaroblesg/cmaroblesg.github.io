@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+      (() => {
+        const key = 'crobles-theme';
+        let preference = 'system';
+
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === 'light' || stored === 'dark') {
+            preference = stored;
+          }
+        } catch {}
+
+        const apply = () => {
+          const systemDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          const theme = preference === 'system'
+            ? (systemDark ? 'dark' : 'light')
+            : preference;
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+
+        apply();
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const options = document.querySelectorAll(
+            '[data-theme-option]'
+          );
+
+          const updateControls = () => {
+            options.forEach((button) => {
+              const selected = button.dataset.themeOption === preference;
+              button.setAttribute('aria-pressed', String(selected));
+            });
+          };
+
+          updateControls();
+
+          options.forEach((button) => {
+            button.addEventListener('click', () => {
+              preference = button.dataset.themeOption;
+
+              try {
+                if (preference === 'system') {
+                  localStorage.removeItem(key);
+                } else {
+                  localStorage.setItem(key, preference);
+                }
+              } catch {}
+
+              apply();
+              updateControls();
+            });
+          });
+        });
+
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).addEventListener('change', () => {
+          if (preference === 'system') apply();
+        });
+      })();
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Discover César Robles: an international technology professional connecting artificial intelligence, data and business transformation."><title>About | César Robles</title><link rel="stylesheet" href="/_astro/BaseLayout.rVS7dPy3.css"><link rel="stylesheet" href="/_astro/about.D9xlt2i9.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/">César Robles.</a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="Open navigation menu"><span>Menu</span><span aria-hidden="true">☰</span></button><nav class="site-nav" aria-label="Main navigation"><a href="/about/" aria-current="page">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><div class="theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div><!-- MOBILE NAVIGATION V1.0 --><div id="mobile-navigation-panel" class="mobile-navigation-panel" hidden><nav class="mobile-site-nav" aria-label="Mobile navigation"><a href="/about/" aria-current="page">About</a><a href="/experience/">Experience</a><a href="/ai-lab/">AI Lab</a><a href="/writing/">Writing</a><a href="/art/">Art</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></nav><!-- MOBILE APPEARANCE V1.1 --><div class="mobile-appearance"><span class="mobile-appearance-label">Appearance</span><div class="theme-control mobile-theme-control" role="group" aria-label="Website appearance"><button type="button" class="theme-option" data-theme-option="light" aria-label="Light appearance" aria-pressed="false" title="Light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button><button type="button" class="theme-option" data-theme-option="system" aria-label="System appearance" aria-pressed="true" title="System"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></button><button type="button" class="theme-option" data-theme-option="dark" aria-label="Dark appearance" aria-pressed="false" title="Dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"></path></svg></button></div></div></div></header><main><main class="about-editorial" data-astro-cid-ta2fbyqs><section class="about-hero container" data-astro-cid-ta2fbyqs><div class="about-hero-content" data-astro-cid-ta2fbyqs><p class="eyebrow" data-astro-cid-ta2fbyqs>César Robles / About</p><p class="about-kicker" data-astro-cid-ta2fbyqs>Technology · Intelligence · Transformation</p><h1 data-astro-cid-ta2fbyqs>Connecting business,<br data-astro-cid-ta2fbyqs><em data-astro-cid-ta2fbyqs>data and technology.</em></h1><p class="about-intro" data-astro-cid-ta2fbyqs>I work at the intersection of artificial intelligence, enterprise technology and business transformation.</p><p class="about-summary" data-astro-cid-ta2fbyqs>With over a decade of experience across international financial institutions, I bring together strategic thinking, technical expertise and product leadership to turn complex challenges into meaningful, scalable solutions.</p><div class="actions" data-astro-cid-ta2fbyqs><a class="button" href="/experience/" data-astro-cid-ta2fbyqs>Explore my experience</a><a class="button secondary" href="/contact/" data-astro-cid-ta2fbyqs>Get in touch</a></div></div><div class="about-hero-aside" aria-label="Professional focus" data-astro-cid-ta2fbyqs><span class="about-aside-line" data-astro-cid-ta2fbyqs></span><span class="about-aside-label" data-astro-cid-ta2fbyqs>Professional perspective</span><strong data-astro-cid-ta2fbyqs>Human insight.<br data-astro-cid-ta2fbyqs>Intelligent technology.<br data-astro-cid-ta2fbyqs>Real impact.</strong><span class="about-aside-index" data-astro-cid-ta2fbyqs>CR / 01</span></div></section><section class="about-section about-perspective" data-astro-cid-ta2fbyqs><div class="container about-split" data-astro-cid-ta2fbyqs><div data-astro-cid-ta2fbyqs><p class="eyebrow" data-astro-cid-ta2fbyqs>01 / International perspective</p><h2 data-astro-cid-ta2fbyqs>From strategy<br data-astro-cid-ta2fbyqs>to execution.</h2></div><div class="about-prose" data-astro-cid-ta2fbyqs><p data-astro-cid-ta2fbyqs>My professional journey spans BBVA, Citibanamex and HSBC, combining experience in financial services, enterprise data management, international transformation and artificial intelligence.</p><p data-astro-cid-ta2fbyqs>At BBVA, my role as Data Scientist Manager includes product ownership within AI Factory and LLM Technologies. Earlier responsibilities involved leading data management and digital and business transformation initiatives, including international experience in London.</p><a class="about-text-link" href="/experience/" data-astro-cid-ta2fbyqs>Discover my professional journey <span aria-hidden="true" data-astro-cid-ta2fbyqs>↗</span></a></div></div></section><section class="about-section container" data-astro-cid-ta2fbyqs><div class="about-section-heading" data-astro-cid-ta2fbyqs><p class="eyebrow" data-astro-cid-ta2fbyqs>02 / Expertise & approach</p><h2 data-astro-cid-ta2fbyqs>Connecting disciplines.<br data-astro-cid-ta2fbyqs><em data-astro-cid-ta2fbyqs>Creating value.</em></h2><p data-astro-cid-ta2fbyqs>Technology creates lasting value when innovation, people and business strategy move in the same direction.</p></div><div class="about-expertise-grid" data-astro-cid-ta2fbyqs><article class="about-expertise" data-astro-cid-ta2fbyqs><span class="about-expertise-number" data-astro-cid-ta2fbyqs>01</span><h3 data-astro-cid-ta2fbyqs>Artificial Intelligence</h3><p data-astro-cid-ta2fbyqs>Generative AI, large language models, machine learning and the development of practical AI-driven solutions.</p></article><article class="about-expertise" data-astro-cid-ta2fbyqs><span class="about-expertise-number" data-astro-cid-ta2fbyqs>02</span><h3 data-astro-cid-ta2fbyqs>Business Transformation</h3><p data-astro-cid-ta2fbyqs>Digital strategy, product ownership, agile delivery and the translation of emerging technologies into business value.</p></article><article class="about-expertise" data-astro-cid-ta2fbyqs><span class="about-expertise-number" data-astro-cid-ta2fbyqs>03</span><h3 data-astro-cid-ta2fbyqs>Data &amp; Technology</h3><p data-astro-cid-ta2fbyqs>Data science, enterprise data management, governance, automation and the engineering foundations of digital transformation.</p></article></div><div class="about-specialities" data-astro-cid-ta2fbyqs><span data-astro-cid-ta2fbyqs>Generative AI &amp; LLMs</span><span data-astro-cid-ta2fbyqs>AI Product Management</span><span data-astro-cid-ta2fbyqs>Digital Transformation</span><span data-astro-cid-ta2fbyqs>Data Science</span><span data-astro-cid-ta2fbyqs>Data Governance</span><span data-astro-cid-ta2fbyqs>Machine Learning</span><span data-astro-cid-ta2fbyqs>Cloud Computing</span><span data-astro-cid-ta2fbyqs>Automation</span><span data-astro-cid-ta2fbyqs>Agile Leadership</span><span data-astro-cid-ta2fbyqs>Python</span></div></section><section class="about-section about-foundation" data-astro-cid-ta2fbyqs><div class="container about-split" data-astro-cid-ta2fbyqs><div data-astro-cid-ta2fbyqs><p class="eyebrow" data-astro-cid-ta2fbyqs>03 / Academic foundation</p><h2 data-astro-cid-ta2fbyqs>Curiosity backed<br data-astro-cid-ta2fbyqs>by discipline.</h2></div><div class="about-credentials" data-astro-cid-ta2fbyqs><div class="about-credential" data-astro-cid-ta2fbyqs><span data-astro-cid-ta2fbyqs>Education</span><h3 data-astro-cid-ta2fbyqs>Doctorate in Communications and Electronics</h3></div><div class="about-credential" data-astro-cid-ta2fbyqs><span data-astro-cid-ta2fbyqs>Education</span><h3 data-astro-cid-ta2fbyqs>Master's Degree in Cybernetics</h3></div><div class="about-credential" data-astro-cid-ta2fbyqs><span data-astro-cid-ta2fbyqs>Education</span><h3 data-astro-cid-ta2fbyqs>Engineering Degree</h3></div><div class="about-credential" data-astro-cid-ta2fbyqs><span data-astro-cid-ta2fbyqs>Professional certifications</span><h3 data-astro-cid-ta2fbyqs>Certified ScrumMaster (CSM) · Certified Scrum Product Owner (CSPO)</h3></div></div></div></section><section class="about-closing container" data-astro-cid-ta2fbyqs><p class="eyebrow" data-astro-cid-ta2fbyqs>04 / Professional philosophy</p><h2 data-astro-cid-ta2fbyqs>Innovation should<br data-astro-cid-ta2fbyqs><em data-astro-cid-ta2fbyqs>deliver real value.</em></h2><p data-astro-cid-ta2fbyqs>I believe meaningful transformation begins with understanding people and problems, then applying the right technology with purpose, responsibility and measurable outcomes.</p><a class="button" href="/contact/" data-astro-cid-ta2fbyqs>Let's connect</a></section></main></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 César Robles</span><span>Artificial Intelligence · Technology · Leadership</span></div></footer><script type="module">var e=document.querySelector(`.mobile-menu-toggle`),t=document.querySelector(`#mobile-navigation-panel`);e&&t&&(e.addEventListener(`click`,()=>{let n=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,String(!n)),e.setAttribute(`aria-label`,n?`Open navigation menu`:`Close navigation menu`),t.hidden=n}),t.querySelectorAll(`a`).forEach(n=>{n.addEventListener(`click`,()=>{e.setAttribute(`aria-expanded`,`false`),t.hidden=!0})}));</script></body></html>
